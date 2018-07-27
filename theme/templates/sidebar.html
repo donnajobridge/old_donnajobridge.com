@@ -1,0 +1,58 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+
+      <h3>
+        <a href="/">
+          <img class="profile-picture" src="{{ SITEURL }}/images/{{ PROFILE_IMAGE }}">
+          {{ SITENAME }}
+        </a>
+      </h3>
+      <p class="lead"></p>
+      <p class="lead">{{ BIO }} </p>
+      <p></p>
+    </div>
+
+    <!-- <ul class="sidebar-menu">
+        {% for title, link in MENUITEMS %}
+        <li><a class="item" href="{{ link }}">{{ title }}</a></li>
+        {% endfor %}
+
+        {% if DISPLAY_PAGES_ON_MENU %}
+          {% for page in PAGES %}
+          <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+          {% endfor %}
+        {% endif %}
+          <!-- {% for cat, null in categories %} -->
+          <!-- <li {% if cat == category %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li> -->
+          <!-- {% endfor %} -->
+    <!-- </ul> -->
+    <ul class="sidebar-menu">
+
+      <li><a href="./projects.html">projects</a></li>
+      <li><a href="./about.html">about</a></li>
+      <li><a href="./pubs.html">publications</a></li>
+      <li><a href="./funding.html">funding</a></li>
+      <li><a href="./contact.html">contact</a></li>
+      <li><a href="./friends.html">friends</a></li>
+
+    </ul>
+
+    <!-- <nav class="sidebar-nav"> -->
+    <!-- {% for name, link in SOCIAL %} -->
+    <!-- {% if name == 'email' %} -->
+    <!-- <a class="sidebar-nav-item" href="mailto:{{ link }}"> -->
+    <!-- <i class="fa fa-envelope"></i> -->
+    <!-- </a> -->
+    <!-- {% else %} -->
+    <!-- <a class="sidebar-nav-item" href="{{ link }}"> -->
+    <!-- <i class="fa fa-{{ name }}"></i> -->
+    <!-- </a> -->
+    <!-- {% endif %} -->
+    <!-- {% endfor %} -->
+    <!-- <a class="sidebar-nav-item" href="{{ FEED_ALL_RSS }}"> -->
+    <!-- <i class="fa fa-feed"></i> -->
+    <!-- </a> -->
+    <!-- </nav> -->
+  </div>
+</div>
