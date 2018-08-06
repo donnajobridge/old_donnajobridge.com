@@ -23,6 +23,73 @@
     <!-- RSS -->
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
     {% include 'fragments/google_analytics.html' %}
+
+<style>
+.icon_bar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.icon-bar a {
+  float: left;
+  width: 25%;
+  text-align: center;
+  padding: 0px 0;
+  transition: all 0.3s ease;
+  color: black;
+  font-size: 36px;
+}
+
+  .column {
+      float: left;
+      padding-bottom: 50px;
+      /* padding: 0px;
+      padding-left:0em; */
+  }
+
+  .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+  }
+
+  .icon_big {
+      width: 50%;
+      float: left;
+      /* height: 50px; */
+  }
+  .icon_title_big {
+      width: 50%;
+      padding-top: 0px;
+      /* height: 200px; */
+  }
+
+  .post-title {
+    color: #6A9FB5;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  hr {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 2em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: inset;
+      border-width: 1px;
+  }
+
+  #similar {
+      background: #black;
+      height:150px;
+  }
+
+
+
+    </style>
+
   </head>
 
   <!-- Color Themes
@@ -37,7 +104,7 @@
      -->
 
 
-  <!-- <body class="theme-base-0d">
+  <body class="theme-base-0d">
     {% include 'sidebar.html' %}
     <div class="content container">
       {% block content %}
@@ -45,15 +112,15 @@
 
     </div>
   </body>
-</html> -->
+</html>
 
 
 
 
 
-<body class="theme-base-0d">
-{% include 'sidebar.html' %}
-<div class="sidebar">
+<!-- <body class="theme-base-0d">
+  {%include 'sidebar.html'%} -->
+<!-- <div class="sidebar">
 <div class="container sidebar-sticky">
   <div class="sidebar-about">
 
@@ -70,20 +137,10 @@
 
   <ul class="sidebar-menu">
 
-    <li><a href="./projects.html">projects</a></li>
-    <li><a href="./about.html">about</a></li>
-    <li><a href="./pubs.html">publications</a></li>
-    <li><a href="./funding.html">funding</a></li>
-    <li><a href="./contact.html">contact</a></li>
-    <li><a href="./friends.html">friends</a></li>
+    <li><a href="./pages/about.html">about</a></li>
+    <li><a href="./pages/contact.html">contact</a></li>
+    <li><a href="./pages/friends.html">friends</a></li>
 
   </ul>
 
-</div>
-</div>
-<div class="content container">
- {% block content %}
-  {% endblock %}
-</div>
-</body>
-</html>
+</div> -->

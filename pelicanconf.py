@@ -6,8 +6,8 @@ AUTHOR = 'donna j bridge'
 SITENAME = 'Donna J. Bridge, Ph.D.'
 SITEURL = ''
 
-STATIC_PATHS = ['images', 'pdfs']
-
+STATIC_PATHS = ['images', 'pdfs', 'articles']
+ARTICLE_PATHS = ['articles']
 PATH = 'content/'
 
 TIMEZONE = 'America/Chicago'
@@ -16,12 +16,19 @@ DEFAULT_LANG = 'en'
 
 THEME = 'theme'
 
+
+MENUITEMS = (
+    ('about', '/pages/about.html'),
+    ('contact', '/pages/contact.html'),
+    ('friends', '/pages/friends.html')
+    )
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+DISPLAY_PAGES_ON_MENU = True
 
 # Blogroll
 SOCIAL = (('email', 'donnajb@gmail.com'),
