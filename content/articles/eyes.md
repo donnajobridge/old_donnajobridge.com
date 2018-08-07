@@ -58,8 +58,6 @@ We found one cluster of activity that survived significance testing. This cluste
 
 The significant cluster of theta activity occurred in the hippocampus just before subjects looked to the object's old spot. This activity reflected the subject remembering where the apple used to be, and predicted that the subject was about to look to that spot. These findings show that our eye movements are precisely timed to thinking and behavior (this has never been shown before!). In this case, specific eye movements reflected remembering old experiences. These results provide concrete evidence that our eyes are powerful indicators of our thought processes.
 
-
-
 ###main points
 * Eye movements are at the cusp of conscious vs. unconscious awareness
 * Eye movements reveal what people are thinking and how the brain is processing information
@@ -69,10 +67,7 @@ The significant cluster of theta activity occurred in the hippocampus just befor
 ###extrapolation
 * Eye movements can be harnessed to gain insight into how people learn, what people like, what people pay attention to and what they later remember
 * Eye movements provide a rich data set that can be combined with other measures (feedback, responses)
-* Encountering interfaces, where do people expect a button or menu to be
+* When designing interfaces or physical spaces, use eye movements to determine where people naturally expect information to be stored
 
-#####citations
-* [Bridge & Voss, 2015, Learning & Memory](/pdfs/bridge2015.pdf)
-* [Bridge, Cohen, Voss, 2017, Journal of Cognitive Neuroscience](/pdfs/bridge2017.pdf)
-* [Marin, VanHaerents, Voss, Bridge, 2018, eNeuro](/pdfs/marin2018.pdf)
-* [Voss, Bridge, Cohen, Walker, 2017, Trends in Cognitive Neuroscience](/pdfs/voss2017.pdf)
+###data & analysis
+[eye  movements & behavior](https://github.com/donnajobridge/locationspace)

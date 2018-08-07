@@ -28,13 +28,17 @@
   width: 100%;
   background-color: #555;
   overflow: auto;
+  float: center;
 }
 
 .icon-bar a {
   float: left;
   width: 25%;
   text-align: center;
-  padding: 0px 0;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 20px;
   transition: all 0.3s ease;
   color: black;
   font-size: 36px;
@@ -54,14 +58,52 @@
   }
 
   .icon_big {
-      width: 50%;
+      width: 40%;
       float: left;
+      padding-top: 75px;
       /* height: 50px; */
   }
   .icon_title_big {
       width: 50%;
-      padding-top: 0px;
+      padding-top: 150px;
+      float: right;
       /* height: 200px; */
+  }
+  .left_pic {
+      width: 50%;
+      float: left;
+      padding-top: 0px;
+      /* height: 50px; */
+  }
+
+  .right_pic {
+      width: 50%;
+      float: right;
+      padding-top: 0px;
+      /* height: 50px; */
+  }
+
+  .left_pic_3 {
+      width: 33%;
+      /* float: left; */
+      padding-top: 0px;
+      padding-left: 30px;
+
+      /* height: 50px; */
+  }
+  .mid_pic_3 {
+      width: 33%;
+      padding-top: 0px;
+      padding-left: 30px;
+
+      /* height: 50px; */
+  }
+  .right_pic_3 {
+      width: 33%;
+      /* float: right; */
+      padding-top: 0px;
+      padding-left: 30px;
+      /* height: 50px; */
   }
 
   .post-title {
@@ -85,9 +127,68 @@
       height:150px;
   }
 
+  #myBtn {
+      /* display: none; /* Hidden by default */
+      position: fixed; /* Fixed/sticky position */
+      bottom: 20px; /* Place the button at the bottom of the page */
+      right: 30px; /* Place the button 30px from the right */
+      z-index: 99; /* Make sure it does not overlap */
+      border: none; /* Remove borders */
+      outline: none; /* Remove outline */
+      background-color: #6A9FB5; /* Set a background color */
+      color: white; /* Text color */
+      cursor: pointer; /* Add a mouse pointer on hover */
+      padding: 15px; /* Some padding */
+      border-radius: 10px; /* Rounded corners */
+      font-size: 18px; /* Increase font size */
+  }
 
-
+  #myBtn:hover {
+      background-color: turquoise; /* Add a dark-grey background on hover */
+  }
+  #show_image {
+    background-color: #6A9FB5;
+    color: white;
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
     </style>
+
+    <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+
+    // function showImage(){
+    //     document.getElementById('loadingImage').style.visibility="visible";
+    // }
+    </script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>
+       $(document).ready(function(){
+          $('#show_image').on("click", function(){
+             $('#face3').toggle();
+          });
+       });
+    </script>
+
+
 
   </head>
 
@@ -153,8 +254,8 @@
   <div class="icon-bar">
     <a href="continuum.html"><img class="icon" src="/images/continuum_icon.jpg"></a>
     <a href="update.html"><img class="icon" src="/images/update_icon.jpg"></a>
-    <a href="tree.html"><img class="icon" src="/images/emo_icon.jpg"></a>
     <a href="eyes.html"><img class="icon" src="/images/eye_icon.jpg"></a>
+    <a href="tree.html"><img class="icon" src="/images/emo_icon.jpg"></a>    
   </div>
 
 <div id="similar">
@@ -176,37 +277,39 @@
 <!-- <h1 class="post-title">consciousness continuum</h1> -->
 
 	<!-- <span class="post-date">Sun 22 July 2018</span> -->
-	<p>One reason that human behavior is so complex is that it can arise from unconscious and conscious sources. A simple example is breathing -- breathing is done automatically, we don’t have to consciously think about inhaling and exhaling every couple of seconds. That would be an extremely inefficient use of our limited cognitive resources! However, if you’ve ever done yoga or meditation, you are well aware that you can take control of your breathing. You can elongate your inhales, or breath quickly and rhythmically just by commanding your attention to your breath. This combination of conscious and unconscious processing that gives rise to our behavior is an area of intense research. Even researchers who study exclusively conscious (or explicit) cognitive processes (as I do), have to contend with influences of unconscious (or implicit) processing.</p>
-<p>My area of research has focused on human learning and memory. I use a variety of methods to measure conscious and unconscious processing to understand how they interact to give rise to our experience of learning and remembering. The methods I use measure different levels of conscious processing. Combining them provides a complex picture of how our brains operate to guide our behavior.</p>
+	<p>Human behavior arises from both unconscious and conscious sources. A simple example is breathing -- breathing is done automatically. we don’t usually think about inhaling and exhaling.  However, you can take control of your breathing. By commanding your attention to your breath, you can breath quickly or elongate your inhales. This combination of conscious and unconscious processing is an area of intense research. Even researchers who study exclusively conscious cognitive processes (as I do), have to contend with influences of unconscious processing.</p>
+<p>A helpful metaphor for understanding human cognition is to think of processes that fall on a <em>consciousness continuum</em>. The consciousness continuum goes from completely unconscious neural activity to the fully conscious explanations we articulate about why we do things. My studies have touched upon 4 layers: neural processing, eye movements, behavior (i.e. actions you take), and feedback (i.e. explanations you have for those actions). Incidentally things at the bottom of the consciousness continuum happen at a much much faster time scale than things at the top. As such, studying memory has required a different tools for understanding each layer.</p>
+<p>My research attempts to track phenomena as they influence one another across the various levels of the consciousness continuum.</p>
 <h3>neural processing</h3>
-<p>At the bottom of the consciousness continuum is neural processing. Our brain is working nonstop behind the scenes, and we don’t have much knowledge about what it’s doing and when it’s doing it. Given the rapid processing speed of our brains, it’s not surprising we can’t keep up with it. I measure brain activity using a number of different techniques to determine how our brain processes information. One technique is called fMRI, which measures blood flow. When we use a part of our brain in a certain task, oxygenated blood flows to that region. However, blood flow changes (10-15 seconds) are very slow compared to brain activity (tens of milliseconds), so we can't get precise timing about when the brain responds to a stimulus. The main advantage of this technique is that we can get great spatial resolution about where the activity happens.</p>
+<p>A human brain is composed of an estimated 100 trillion neural connections. Unsurprisingly, we don’t have much insight into it's inner workings. Neuroscientists have developed several different approaches to measuring the activity of a living working brain (fMRI, EEG), but each of these techniques has it's own limitations.</p>
+<p>fMRI measures blood flow. It roughly tracks which parts of your brain are currently "thinking", because oxygenated blood flows to regions with a lot of neural activity. fMRI has become hugely popular in the medical community because it was the first technique to be able to measure 3D activity throughout an entire human brain to millimeter-scale resolution. However, blood flow is roughly 10,000 times slower than neural activity (10-15 seconds compared to tens of milliseconds). so we can't get precise timing about when the brain responds to a stimulus.</p>
 <div class="clearfix">
-<div class="column icon_big">
+<div class="column left_pic">
 <h4> fMRI activity related to memory</h4>
 </div>
 </div>
 
 <div class="clearfix">
-<div class="column icon_big">
+<div class="column left_pic">
 <img class="icon" src='/images/bold.png'>
 </div>
-<div class="column icon_title_big">
+<div class="column right_pic">
 <img src='/images/eeg.png'>
 </div>
 </div>
 
-<p>Another technique I use for studying brain activity is called EEG (electrocorticography), which measures electrical activity from the brain. We can decompose this raw electrical activity into distinct frequency bands by applying the Fourier Transform to the timeseries data. The primary benefit of this technique is that it has highly precise temporal resolution -- we can detect changes in electrical activity on the millisecond time scale. This technique comes in a couple forms, and I've used two of them. The most common form is scalp EEG, which measures electrical activity emanating from the scalp. However, a really exciting (and rare) form of of this technique is called intracranial EEG. This technique records electrical activity directly from the brain -- the electrodes are implanted deep into the brain rather than lying on the outer scalp. To do this research, I work with epilepsy patients who have these electrodes implanted for clinical purposes. This technique has the best of both worlds, high spatial resolution and high temporal resolution. The downside is that patients are very rare and their brains may be slightly abnormal due to epilepsy.</p>
+<p>I've also used EEG (electroencephalography), which measures electrical activity from the brain at millisecond timescales. This lets us measure at a resolution where we can capture neural activity as it unfolds. This technique comes in a couple forms, and I've used two of them: scalp EEG, which measures from electrodes around someone's scalp, and intracranial EEG, which measures from electrodes that have been surgically implanted deep into a patient's brain.</p>
+<p>The most common form, scalp EEG, looks like a shower cap. While it has precise temporal resolution, it detects electrical activity that has traveled through the brain up to the scalp. A major weakness is that we are unable to see exactly where the signals are coming from. Intracranial EEG, on the other hand, can measure activity from specific regions deep in the brain because electrodes on tiny needles have been impaled deep into a patient's brain. Intracranial EEG is used clinically for epilepsy patients seeking to pinpoint the exact location of their seizures, so that it can potentially be removed with surgery. The process of pinpointing this location takes about a week. I work with epilepsy patients while they are undergoing this treatment.</p>
 <h3>eye movements</h3>
-<p>Next up on the continuum is eye movements. Eye movements occur rapidly -- we make 3 to 5 distinct eye movements per second. You are only consciously aware of only a subset of the eye movements you make. This is because different processes (e.g. perception, attention, and memory) can dictate what you look at and when, before you have the chance to make a conscious decision about where to look.</p>
-<p>For example, imagine a small child did something wrong -- he broke the cookie jar. To cover up his mistake, he crudely hid it behind a chair. You ask, what happened to the cookie jar? He doesn’t answer, but you know immediately by his gaze where the cookie jar remnants are. The child doesn’t want to give away that information, but his eyes couldn’t help but look at the evidence.</p>
+<p>Eye movements occur more rapidly than you might think. You look at 3 to 5 distinct places every second. You are only consciously aware of only a subset of these movements. Different processes (e.g. perception, attention, and memory) can dictate what you look at and when, before you have the chance to make a conscious decision about where to look.</p>
+<p>For example, imagine a small child did something wrong -- he broke the cookie jar and crudely hid it behind a chair. You ask, what happened to the cookie jar? He doesn’t say anything, but you know immediately by his gaze where the cookie jar remnants are. His eyes couldn’t help but look at the evidence. <a href="eyes.html">I've designed experiments to directly measure this phenomena</a>.</p>
 <p><img alt="fig2" src="/images/cookie.png"></p>
-<p>Of course we also move our eyes deliberately to certain locations, for instance when we are trying to pay attention to someone talking or when we are searching the room for our keys. The main point is that eye movements can be governed by both conscious and unconscious forces. They can provide rich information about what a person might be thinking on a rapid time scale by revealing the evolution of our thoughts . In the <a href="eyes.html">eyes are the window to the brain section</a>, I talk more about eye movements and how I've used them to deepen our understanding of the brain and human behavior.</p>
+<p>Of course we also move our eyes deliberately to certain locations. We can choose to look at a painting or choose to look under the couch for the tv remote. The main point is, eye movements can provide rich information about what a person might be thinking as their thoughts unfold.</p>
 <h3>behavior</h3>
-<p>The next step in the continuum is behavior. The specific type of behavior I’m talking about is what cognitive neuroscientists typically measure to link cognition (or thinking) to neural activity. For instance, in a standard memory task, subjects view 100 images of various objects. After a delay, subjects are shown 200 images -- a mixture of images they saw before and images they have never seen. When the subject sees an image on the test, they make a button press indicating if they remember it or not.</p>
-<p>This type of behavioral response gives reasonably good information about the content of people’s memory. However, it is lacking in a few ways. For instance, when the subject first sees the image, he may first scan the picture to find any features that were familiar. Then, he searched his memory for any matches. Maybe he finds it is a partial match. He then makes a decision about how confident he is that he did indeed see that exact image before. And finally, he plans the motor response to initiate the movement of his finger to press the appropriate button.</p>
-<p>When we simply measure the final response, we are unable to capture that dynamic processing that led up to the ultimate behavior. Nonetheless, it does provide some useful information, and it is prevalently used in the field.</p>
+<p>A behavior is a specific action that you take. For cognitive neuroscientists, behavior is usually measured in how well you can complete a task (like recognize whether you've seen an image before or not). By measuring brain activity while you are doing very specific tasks, scientists learn which unconscious mechanisms are involved in conscious behaviors.</p>
+<p>Behavior, however, occurs on much much slower time scales than the unconscious eye movements and neural activity.  The outcome of a trial lets us see what conclusion your thought process led you to. It does not let us analyze all of the individual events and subprocesses that led you to that specific behavior.</p>
 <h3>feedback</h3>
-<p>The final step in the continuum is feedback. Primarily, I’ve used feedback from participants when I’m trying out a new experiment and working out the kinks. After they complete a task, I’ll sit down with the participants and ask them their thoughts on the task. What strategy did they use? Did it feel too hard? Was there anything peculiar about the stimuli? Getting direct feedback from the participants saves a lot of time when I’m designing new experiments. You don’t want to end up with an experiment with some glaring errors that were readily detected by the participants. Also, people are pretty perceptive, so it’s useful to take advantage of their thoughts to improve your design.</p>
+<p>I ask participants for feedback when I’m trying out a new experiment and working out the kinks. After they complete a task, I’ll sit down with the participants and ask them their thoughts on the task. What strategy did they use? Did it feel too hard? Was there anything peculiar about the stimuli? Getting direct feedback from the participants saves a lot of time when I’m designing new experiments. You don’t want to end up with an experiment with some glaring errors that were readily detected by the participants. Also, people are pretty perceptive, so it’s useful to take advantage of their thoughts to improve your design.</p>
 	<!-- 	<div id="disqus_thread"></div>
 		<script type="text/javascript">
 			var disqus_shortname = 'donnajobridge';
@@ -219,81 +322,8 @@
 	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
  -->
 </div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">&#8679;</button>
 
     </div>
   </body>
 </html>
-
-
-
-
-
-<!-- <body class="theme-base-0d">
-<div class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-
-      <h3>
-        <a href="/">
-          <img class="profile-picture" src="./images/donna.jpg">
-          Donna J. Bridge, Ph.D.
-        </a>
-      </h3>
-      <p class="lead"></p>
-      <p class="lead">Cognitive Neuroscientist </p>
-      <p></p>
-    </div>
-
-    <ul class="sidebar-menu">
-        <li><a class="item" href="/pages/about.html">about</a></li>
-        <li><a class="item" href="/pages/contact.html">contact</a></li>
-        <li><a class="item" href="/pages/friends.html">friends</a></li>
-
-          <!--  -->
-          <!-- <li class="active"><a href="./category/articles.html">articles</a></li> -->
-          <!--  -->
-    </ul>
-    <!-- <nav class="sidebar-nav"> -->
-    <!--  -->
-    <!--  -->
-    <!-- <a class="sidebar-nav-item" href="#"> -->
-    <!-- <i class="fa fa-You can add links in your config file"></i> -->
-    <!-- </a> -->
-    <!--  -->
-    <!--  -->
-    <!--  -->
-    <!-- <a class="sidebar-nav-item" href="#"> -->
-    <!-- <i class="fa fa-Another social link"></i> -->
-    <!-- </a> -->
-    <!--  -->
-    <!--  -->
-    <!-- <a class="sidebar-nav-item" href=""> -->
-    <!-- <i class="fa fa-feed"></i> -->
-    <!-- </a> -->
-    <!-- </nav> -->
-  </div>
-</div> -->
-<!-- <div class="sidebar">
-<div class="container sidebar-sticky">
-  <div class="sidebar-about">
-
-    <h3>
-      <a href="/">
-        <img class="profile-picture" src="../images/donna.jpg">
-        Donna J. Bridge, Ph.D.
-      </a>
-    </h3>
-    <p class="lead"></p>
-    <p class="lead">Cognitive Neuroscientist </p>
-    <p></p>
-  </div>
-
-  <ul class="sidebar-menu">
-
-    <li><a href="./pages/about.html">about</a></li>
-    <li><a href="./pages/contact.html">contact</a></li>
-    <li><a href="./pages/friends.html">friends</a></li>
-
-  </ul>
-
-</div> -->

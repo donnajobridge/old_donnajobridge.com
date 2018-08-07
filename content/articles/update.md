@@ -31,7 +31,7 @@ First I looked at the rate of forgetting over the three-day period. For this ana
 
 ![fig3](/images/react_kdeForgetting.png)
 
-Next I looked at how each test influenced the content of memory on each subsequent test. For this analysis, I looked at final memory outcome on the Day 3 test. I measured the distance each object was placed from 3 different locations: the originally studied location, the location subjects placed the object on the Day 1 test, and the location subjects placed the object on the Day 2 test. In this way, I could see how each of these experiences influenced where subjects placed the object on the final Day 3 test. Interestingly, the results showed increasing influence of the most recent test on final memory performance. Subjects placed objects closest to the Day 2 test location, followed by the Day 1 test location, and farthest from the originally studied location.
+Next I looked at how each test influenced the content of memory on each subsequent test. For this analysis, I looked at final memory outcome on the Day 3 test. I measured the distance each object was placed from 3 different locations: the originally studied location, the location subjects placed the object on the Day 1 test, and the location subjects placed the object on the Day 2 test. In this way, I could see how each of these experiences influenced where subjects placed the object on the final Day 3 test. Interestingly, the results showed increasing influence of the most recent test on final memory performance. Subjects placed objects closest to the Day 2 test location, followed by the Day 1 test location, and farthest from the originally studied location. [(Bridge, 2012)](/pdfs/bridge12.pdf)
 
 ![fig4](/images/react_kdeUpdating.png)
 
@@ -47,16 +47,17 @@ In this new study, I implemented 2 different conditions. First, subjects studied
 If the updating effect I saw in the first study was really just about recency, it shouldn’t matter if I show subjects the wrong location or that mistakenly recall the wrong location -- they should remember the most recently encountered location on the final test. On the other hand, if updating only happens when we actively remember the wrong location, then subjects should only choose the updated location in the Active condition, but not the Passive condition.
 
 ###results
-It turns out remembering events is really special. Subjects were not easily tricked into thinking the wrong location I selected was the object’s original location. In the Passive location, subjects disproportionately chose the original location over the other options. However, updating was prevalent in the Active condition. Subjects usually chose the updated (incorrectly remembered) location on the final test instead of the other choices. These results show that remembering events provides an opportunity to update them. The good news is that we are not easily fooled by incorrect information that does not match our memories.
+It turns out remembering events is really special. Subjects were not easily tricked into thinking the wrong location I selected was the object’s original location. In the Passive location, subjects disproportionately chose the original location over the other options. However, updating was prevalent in the Active condition. Subjects usually chose the updated (incorrectly remembered) location on the final test instead of the other choices. These results show that remembering events provides an opportunity to update them. The good news is that we are not easily fooled by incorrect information that does not match our memories. [(Bridge, 2014 (1))](/pdfs/bridge14jon.pdf)
 
-![fig6](/images/cxtup_swarm.png)
-
-###where does this study fall on the implicit-explicit continuum?
-These studies involved explicit responses from participants. On each test, I explicitly asked participants to place the objects back in their original locations. On the final test, they tended to erroneously remember the previously remembered location rather than the original location. I would argue that the process of memory updating was implicit. Subjects were not aware that their memory changed each time I tested them. This study goes to show that even when we do some explicit actions (intentionally remembering an event), new information can seep into those memories due to unconscious processes happening in our brain.
+<p align='center'>
+<img src="/images/cxtup_swarm.png" alt="fig6" style="width:75%;"/>
+</p>
+###where does this study fall on the consciousness continuum?
+These studies involved explicit responses from participants. On each test, I explicitly asked participants to place the objects back in their original locations. On the final test, they tended to erroneously remember the previously remembered location rather than the original location. I would argue that the process of memory updating was unconscious. Subjects were not aware that their memory changed each time I tested them. These studies goes to show that even when we do some explicit actions (intentionally remembering an event), new information can seep into those memories due to unconscious processes happening in our brain.
 
 ###main points
 * There’s no true unadulterated original version memory stored in your brain, unless it was never accessed (remembered). But if that were the case, it would probably be buried or forgotten.
-* Our memories are engineered to change. This is adaptive, and helps us learn new information quickly and efficiently.
+* Our memories are engineered to change. This is adaptive, and helps us learn new information quickly and efficiently. [(Bridge, 2014 (2))](/pdfs/bridge14nsy.pdf)
 
 ###press links
 * [npr](https://www.npr.org/sections/health-shots/2014/02/04/271527934/our-brains-rewrite-our-memories-putting-present-in-the-past)
@@ -65,7 +66,7 @@ These studies involved explicit responses from participants. On each test, I exp
 * [wttw](https://chicagotonight.wttw.com/2012/10/31/distorted-memories)
 * [cnn](http://thechart.blogs.cnn.com/2012/09/20/your-memory-is-like-a-game-of-telephone/)
 
-###citations
-* [Bridge and Paller, 2012, Journal of Neuroscience](/pdfs/bridge12.pdf)
-* [Bridge & Voss, 2014, Journal of Neuroscience](/pdfs/bridge14jon.pdf)
-* [Bridge & Voss, 2014, Neuropsychologia](/pdfs/bridge14nsy.pdf)
+
+###data & analysis
+* [experiment 1](https://github.com/donnajobridge/data_visualizations/tree/master/react)
+* [experiment 2](https://github.com/donnajobridge/data_visualizations/tree/master/cxtupdate)
