@@ -4,8 +4,7 @@ Date: 2018-07-22
 Tags: memory, emotion, faces, cognitive neuroscience, data science
 Image: /images/emo_icon.jpg
 
-
-Early on in any relationship, we tend to wear rose-colored glasses. Think back to a relationship you had with an old flame. In the beginning, everything was great, he was the best, life was good. But, at that time, you were probably overlooking some red flags that turned out to really bug you later on. After a few months of bliss, it all fell apart. When you look back and reflect on that past relationship, you may only really remember the things you hated and why you moved on. Like how he would snore really loudly at night, or always forget to fill up the Brita with water. Just the major deal breakers.
+Think back to an old relationship you are now far-removed from. Early on in that relationship, you probably were wearing rose-colored glasses. Everything was great, he was the best, life was good. But, at that time, you were probably overlooking some red flags that turned out to really bug you later on. After a few months of bliss, it all fell apart. When you look back and reflect on that past relationship, you may only really remember the things you hated and why you moved on. Like how he would snore really loudly at night, or always forget to fill up the Brita with water. Just the major deal breakers.
 
 In this example, the context shifted. When you were initially in the relationship, you were happy and in love and focused on the positive outlook of the relationship, As things soured, you started focusing on the details, and only saw traits that were a major turn off.
 

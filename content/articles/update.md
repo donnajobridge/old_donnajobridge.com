@@ -4,7 +4,6 @@ Date: 2018-07-25
 Tags: memory, updating, false memory, cognitive neuroscience, data science
 Image: /images/update_icon.jpg
 
-
 Do you have one of those friends who likes to tell the same story at every party you seem him? But having heard it many times, you noticed how on each iteration the sky gets darker, the water gets deeper,, and the guppy has morphed into a whale. Does this mean your friend is a big fat liar? Well maybe a little. But, this is also a natural feature of our memory. It turns out our memories are not static representations of past events like a photo or a video recording, but they dynamically change every time you think about them.
 
 It may seem troublesome that we don’t keep accurate representations of the past stored in our memories -- but I would argue that this is actually an adaptive process that allows us to cope with our constantly-changing situations. For instance, if our memories stayed the same and never changed, you could never learn that your partner is now 20 years older than when you met him, because the younger version of him would prevail in your memory — it would never get updated with constantly changing information (gray hair, wrinkles around the eyes, etc.).

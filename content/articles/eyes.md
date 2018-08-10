@@ -27,7 +27,7 @@ To really capture how our brain processes information in real time, I pioneered 
 <!-- ![hpc](/images/hpc_electrode.png) -->
 ###research design
 I designed a special memory task to differentiate remembering information from detecting new information using eye movements. In the memory task, I inferred that remembering information occurred when subjects looked at old content, whereas identifying new information occurred when subjects looked at new content. Using this technique, I was able to pull apart how these processes operate independently and interact on rapid time scales.
-<video loop width="100%" autoplay>
+<video loop width="100%" controls>
   <source src="images/eyepath.mp4" type="video/mp4">
 Your browser does not support the video tag.
 </video>

@@ -13,9 +13,11 @@ travel, and playing board games with my husband.
 ###resume
 [my resume](/pdfs/donna_resume.pdf)
 ###manuscripts
-Marin BM, VanHaerents SA, Voss JL, Bridge DJ (2017) [Prefrontal theta-burst stimulation disrupts the organizing influence of active short-term retrieval on episodic memory](/pdfs/marin2018.pdf). eNeuro
+Nilakantan AS, Bridge DJ, VanHaerents SA, Voss JL (2018) [Distinguishing the precision of spatial precision from its success: Evidence from healthy aging and mesial temporal lobe resection.](/pdfs/nilakantan2018.pdf) Neuropsychologia, 119: 101-106.
 
-Voss JL, Bridge DJ, Cohen NJ, Walker JA (2017) [A closer look at the hippocampus and memory](/pdfs/voss2017.pdf). Trends in Cognitive Science
+Marin BM, VanHaerents SA, Voss JL, Bridge DJ (2018) [Prefrontal theta-burst stimulation disrupts the organizing influence of active short-term retrieval on episodic memory](/pdfs/marin2018.pdf). eNeuro
+
+Voss JL, Bridge DJ, Cohen NJ, Walker JA (2017) [A closer look at the hippocampus and memory.](/pdfs/voss2017.pdf) Trends in Cognitive Science
 
 Bridge DJ, Cohen NJ, Voss JL (2017) [Distinct hippocampal versus frontoparietal-network contributions to retrieval and memory-guided exploration.](/pdfs/bridge2017.pdf) Journal of Cognitive Neuroscience
 
