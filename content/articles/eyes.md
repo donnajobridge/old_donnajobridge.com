@@ -60,11 +60,11 @@ We looked at the raw electrical activity recorded from the hippocampus. The raw 
 
 We focused on a low frequency range called theta (3-8 Hz), because it is important for remembering. This frequency range serves as a channel for the hippocampus to communicate to other parts of the brain. The hippocampus contains an index of all of our memories, but it doesn't contain the actual content. It signals to other brain regions that store the actual memory content to queue up the memory, so that we can have the experience of reliving our old memories.
 
+When we looked at theta activity in the hippocampus, we found that the theta waves aligned just before subjects looked to the apple's old location. You can see the peaks and troughs roughly lining up just before the patient moved her eye to the apple's old spot (highlighted in blue). That means that theta is linked to the experience of remembering where the object used to be. And, it means that the eye movement provided a good metric for knowing *when* the subject remembered the object's old location.
+
 <p align='center'>
 <img src="/images/brainwaves.gif" alt="hpc" style="width:100%;"/>
 </p>
-
-When we looked at theta activity in the hippocampus, we found that the theta waves aligned just before subjects looked to the apple's old location. You can see the peaks and troughs roughly lining up just before the patient moved her eye to the apple's old spot (highlighted in blue). That means that theta is linked to the experience of remembering where the object used to be. And, it means that the eye movement provided a good metric for knowing *when* the subject remembered the object's old location.
 
 ###quantifying effects of brain activity
 Although that one trial looks fairly convincing that theta waves are aligned to eye movements when we are remembering something, it's not statistically sound. We have to look at activity across many trials and many patients and see if the effect holds up. Furthermore, we have to look across a whole range of frequencies to make sure that theta is really something special.
