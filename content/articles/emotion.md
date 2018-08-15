@@ -4,11 +4,13 @@ Date: 2018-07-22
 Tags: memory, emotion, faces, cognitive neuroscience, data science
 Image: /images/emo_icon.jpg
 
-Think back to an old relationship you are now far-removed from. Early on in that relationship, you probably were wearing rose-colored glasses. Everything was great, he was the best, life was good. But, at that time, you were probably overlooking some red flags that turned out to really bug you later on. After a few months of bliss, it all fell apart. When you look back and reflect on that past relationship, you may only really remember the things you hated and why you moved on. Like how he would snore really loudly at night, or always forget to fill up the Brita with water. Just the major deal breakers.
+Think back to an old romantic relationship. Early on, you were probably wearing rose-colored glasses -- everything was great, he was the best, life was good. Maybe you ignored some red flags. But after a few months of bliss, it all fell apart. Now, reflecting on that relationship, you may only really remember how he snored and never filled up the Brita. the major deal breakers.
 
-In this example, the context shifted. When you were initially in the relationship, you were happy and in love and focused on the positive outlook of the relationship, As things soured, you started focusing on the details, and only saw traits that were a major turn off.
+What happened? the context shifted. When you were initially in the relationship, you were happy and in love and focused on the positive outlook of the relationship, As things soured, you started focusing on the details, and those details were a major turn off.
 
-###background
+Rose colored glasses can make it hard to see when a flag is red.
+
+###The Forest is Trees. Trees are a forrest.
 It turns out there is a relationship between emotion and the types of information people pay attention to and remember. Positive emotions cause people to focus on the big picture, or, ‘see the forest instead of the trees’. Whereas negative emotion causes people to focus on the trees, without really noticing the forest.
 
 A previous study demonstrated this relationship directly [(Gasper & Clore)](https://www.ncbi.nlm.nih.gov/pubmed/?term=gasper+clore+2002). In this study, the authors used modified Navon figures, which are big shapes made up of little shapes [(Kimchi & Palmer)](https://www.ncbi.nlm.nih.gov/pubmed/6214605). Subjects saw a shape on top of the screen (a big triangle made of small squares) that served as a cue. On the bottom of the screen, they saw two related shapes and were prompted to choose the image that was most similar to the cue.

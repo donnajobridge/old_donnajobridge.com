@@ -13,3 +13,5 @@ Tara: [tailor](http://williamsburgseamster.com)
 Jessica: [cognitive neuroscience](http://pallerlab.psych.northwestern.edu/Jess.html)
 
 Peter: [data science](http://peterbwinter.com/)
+
+Nicole: [environmental entrepreneur](https://www.greenprintpartners.com/)
