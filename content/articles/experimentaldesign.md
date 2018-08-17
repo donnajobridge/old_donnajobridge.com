@@ -11,6 +11,14 @@ To understand what specific brain activity means, we have to link it to some kin
 
 To parse really fast sequences of brain activity we need a behavioral metric that gets close to matching it.
 
+##striking a balance between simplicity and complexity
+Its easy to fall into the trap of creating an experiment that attempts to test too many things at once. On the other hand, too simple is not very interesting either. The approach I've taken is to consider the main hypothesis I want to test. Then, figure out the necessary control (like active vs. passive).
+
+##designing for the right tools and population
+Experimental design is not one-size fits all. Designing a task for children vs. adults will look completely different, even if you are testing the same phenomenon.
+
+The different tools available for studying brain activity vary in their benefits and short-comings. fMRI tells us where in the brain the action is happening, whereas eeg tells us when it happens. That means, we have to design very different experiments to take advantage of these features.
+
 ###main points
 * Designing specific tasks are required in order to harness the power of eye movements
 * by combining the right set of tools we can answer questions that were previously inaccessible.

@@ -6,23 +6,42 @@ Image: /images/active_icon.jpg
 
 Summary:
 
-Individual vs. team member - team member gets put into soccer game, has individual stats, but also affects all other team members
+When you consider a team sport, like soccer, individual players like Messi are sure to come to mind. But, when it comes down to winning is a team sport. Even though every team might have one or two all-star players, those individuals are not likely winning most of the games. Instead, when they play, they influence activity on the whole field, which affects all of the team members currently playing.
 
-In most cases, it’s not helpful to actually think about the brain as if it were a computer. They seem to operate much differently. For instance, a computer is really good at crunching tons of numbers iteratively and efficiently to extract patterns. Humans can extract patterns implicitly, but we don’t do this by going through each iteration of every possible combination. However, I think the long-term memory storage vs. RAM (short-term Memory storage) is a pretty good analogy for the way active vs. inactive memory works in humans.
+###memory is not an island
+Our memory is a team sport too. We don't have knowledge of isolated facts. One thing that makes us so intelligent is our ability to make connections among seemingly unrelated pieces of information. How do we do this so well? This is the heart of memory. At the same time, we don't form associations between every piece of content we encounter. Our brains are relatively selective at deciding what gets gelled together. How does it do that?
 
-The idea of active vs. inactive memory is relatively simple. We have accumulated vast amounts of information over our lifetime, but we don’t need to have instantaneous access to all of it all of the time. So, our brains can efficiently store this information and gain access to it when we receive some kind of input or cue that queues the memory up. When this happens, we can think of that memory as going into ‘active storage’ so we can use it to make decisions and guide our behavior.
+One idea is that we have both "active" and "inactive" memories at any given time. The idea of active vs. inactive memory is relatively simple. We have accumulated vast amounts of information over our lifetime, but we don’t need to have instantaneous access to all of it all of the time. So, our brains can efficiently store this information and gain access to it when we receive some kind of input or cue that queues the memory up. When this happens, we can think of that memory as being "activated" so we can use it to make decisions and guide our behavior.
 
+'once you stop learning you start dying'
+-- albert einstein
 
-Context
-Queueing up a memory has a number of ramifications on behavior and later memory. One well-known finding is called the testing effect. This effect shows that when people are forced to recall information, memory is substantially better than simply restuding the information. This is especially useful when learning content, such as learning a new language. Creating mini-tests during learning (What is the english word for Gehirn?) yields better long-term retention compared to simply restudying the association over and over again (Gehirn means brain).
+###testing accelerates learning
+If you're in school, you are probably used to getting tested on a weekly basis. Once you leave school, the physical tests diminish, but that doesn't mean you aren't constantly learning new facts and skills. Whether its learning how to use a new application or speak a foreign language, effective learning strategies are highly valuable. There are so many great tools out there to teach people new skills. Web-based programs like Duolingo and DataCamp are popular tools that drill language or computing concepts. What makes these tools so effective?
 
-Most research about memory treats it like it is a stable copy of an event that we experienced. A lot of my research has focused on how this is not the case, it’s actually a lot more messy.
+These web-based programs emphasize one thing: active engagement. Rather than simply reading material and repeating it over and over until its drilled into your head, effective learning programs get the user to actively engage in the material. This active engagement can take the shape of memory retrieval: actively remember some specific content you studied. Or, it can force the user to creatively apply concepts they've learned in new situations. Both of these approaches cause the user to have some agency during the learning process. That is, the user has to voluntarily remember specific content, make a choice, or creatively combine information to form something new.
 
+###how does actively remembering influence how you behave?
+Some of my research has investigated how actively remembering a specific event influences how we engage with other content in the environment. This research has focused on how we dynamically use our memory to guide our behavior and influence how we learn new information.
 
-My Stuff
-My research has gone beyond investigating how our memory improves by testing it. Instead, I’ve focused on how we dynamically use our memory to guide our behavior and influence how we learn new information and form new associations.
+The idea is just like the soccer player analogy from above. How does putting one soccer player off the bench and onto the field influence the entire team dynamics?
 
-For example, my research has shown that we are much better at remembering retrieved content over restudied content -- even when the retrieved content is wrong! “I remember Peter wearing a blue hat!” is going to be much more memorable than evening seeing Peter wearing a red hat again! Second, recalling a memory enables us to learn new content quickly and incorporate it into that existing memory representation or schema. Creating associations between new content and stuff we already know helps us learn very quickly. Third, recalling a memory influences how and what we pay attention to. We focus on content that is new, which promotes the integration of that information into our recalled memory.
+##remembering promotes learning other information
+I tested the idea that remembering a specific event would help people learn other information more efficiently. The trick was making the other information totally irrelevant to the remembered event and getting subjects to encounter the other content immediately after remembering.
+
+For this task, subjects studied object-location associations. Later, I tested two conditions. In an active condition, I asked subjects to recall each object-location association. In a passive condition, I asked subjects to simply move the object to a box on the screen, so they weren't required to remember anything about the object. Immediately after the subject moved the object, they encountered a face.
+
+Later, I tested subjects' memory of the faces. The hypothesis was that subjects would remember faces better if they encountered them right after they *actively remembered* an object-location rather than right after they *passively moved* an object-location.
+
+Interestingly we found just that. Memory for faces was better simply because they encountered it when they were in a active state. For this study, we also analyzed scalp EEG data, so we could see brain activity associated with later remembering the faces in the active and passive conditions. The EEG data looked remarkably different in the two conditions. These data suggest that actively remembering specific events creates an active brain state that facilitates learning.
+
+Because that was a scalp EEG study, we were unable to record eye movements effectively. Unfortunately, scalp EEG is susceptible to a lot of muscle artifacts. Eye movements produce a lot of noise in the data, making it difficult to separate real brain activity from eye-muscle activity, so we had to ask subjects to maintain a static fixation while they studied the faces.
+
+However, since we found that actively remembering an event influences memory of other content, we wondered if it would also influence how we engage other content. To study this, we modified the task design so that it was suitable to examine eye movements. In this way, we could see how actively remembering one piece of information influences how we visually explore other content.
+
+ ask subjects to  
+
+recalling a memory enables us to learn new content quickly and incorporate it into that existing memory representation or schema. Creating associations between new content and stuff we already know helps us learn very quickly. Third, recalling a memory influences how and what we pay attention to. We focus on content that is new, which promotes the integration of that information into our recalled memory.
 
 Main Points
 Accessing specific memories guides our behavior, determines what we pay attention to
@@ -30,7 +49,7 @@ Recalling information promotes later memory for the information over and above r
 Recalling information allows integration of new content into that memory.
 
 
-Extrapolation
+####real world applications
 When you are learning new content, give yourself little tests to promote rapid learning
 Try to form associations between new content and concepts you already know that seem similar or related
 Get people to actively engage with content, rather than passively use content (for example, have people make choices, fill in the blank with missing information, generate answers rather than instructing people to press certain buttons, or read content).

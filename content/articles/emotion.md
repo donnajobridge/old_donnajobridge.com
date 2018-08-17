@@ -10,25 +10,27 @@ What happened? if those red flags were there the whole time, why are they more a
 
 Rose colored glasses can make it hard to notice that a red flag is actually red.
 
-###The Forest is Trees. Trees are the forest.
+###the forest is the trees. the trees are the forest.
 It turns out there is a relationship between emotion and the types of information people pay attention to and remember. Positive emotions cause people to focus on the big picture, or, ‘see the forest instead of the trees’. Whereas negative emotion causes people to focus on the trees, without really noticing the forest.
 
-It turns out, attention researchers have been studying how people focus on the big picture or on the features that make them up, using [Navon figures] (https://en.wikipedia.org/wiki/Navon_figure). In a Navon figure, a big shape is composed of multiple smaller shapes. The original version used letters, but people have also used geometric shapes [(Kimchi & Palmer)](https://www.ncbi.nlm.nih.gov/pubmed/6214605). You can study this by giving a person a random cue that indicates if he should identify the small feature or the big shape as fast as possible.  
+It turns out, attention researchers have been studying how people focus on the big picture or on the features that make them up, using [Navon figures](https://en.wikipedia.org/wiki/Navon_figure). In a Navon figure, a big shape is composed of multiple smaller shapes. The original version used letters, but people have also used geometric shapes [(Kimchi & Palmer)](https://www.ncbi.nlm.nih.gov/pubmed/6214605). You can study this by giving a person a random cue that indicates if he should identify the small feature or the big shape as fast as possible.  
 
 For instance, one study showed that writing about either a positive or negative experiences changed if people people focused on the the global or local levels  [(Gasper & Clore)](https://www.ncbi.nlm.nih.gov/pubmed/?term=gasper+clore+2002). The experimental design literally forces people to choose between the big picture and the details.
 
-![fig1](/images/shapes_mood.jpg)
+<p align="center">
+<img src="/images/shapes.png" alt="f1" style="width:60%;"/>
+</p>
 
 The subjects were prompted to write about either a positive or negative personal experience. Then, they were shown a modified Navon shape, and asked to choose which (of two) other Navon shapes were more similar to the cue. One shape was similar on the local level (small triangles making up a large square). The other shape was similar on the global level (a large triangle made of little squares). People who wrote about positive experiences were more likely to choose based on global similarity, whereas people who wrote about a negative experience focused on the local feature.
 
 This suggests that mood influences what type of information we pay attention to.
 
-###What about memory?
+###what about memory?
 These findings made me wonder how our current emotional state influences *what we remember* about an experience (and not only what we pay attention to). Do we *remember* the the big picture or the details?
 
 Shifting this question to *memory* requires changing a few key aspects of the experimental design.
 
-####Designing the experiment
+####designing the experiment
 First, I couldn't use Navon figures. As clever as they are, geometric shapes and letters are not memorable. Our mental representation of the letter E is abstracted to the point where it's hard to remember any specific letter E you've encountered.  However, local vs. global details are prevalent in plenty of naturally-occurring stimuli. For instance, houses have both local features like the windows, door, building material, and these elements fit together to form the the overall shape and style of the house.
 
 For my experiment to work, I had to pick a particular experimental stimulus where subjects could study dozens of them (called trials) and remember them distinctly after a delay. I ended up opting for something we all extremely familiar with: faces.
@@ -57,11 +59,19 @@ The second experimental feature I changed was the mood induction. Faces are inte
 
 I took advantage of this natural tendency to form associations between people and narratives. Rather than having subjects write about their own past experience to alter their mood, I tailored positive and negative stories to be directly relevant to the faces that subjects studied for the memory test. I wrote a bunch of happy and sad vignettes and had subjects read one before studying a face. In this way, a happy or sad story was uniquely associated to each face.
 
-![fig3](/images/face_task.png)
+<p align="center">
+<img src="/images/emo_study.png" alt="f1" style="width:100%;"/>
+</p>
 
-###Emotion influences memory
+
+###emotion influences memory
 
 Later, I tested subjects' memory of the faces. For the test, I showed them the faces they’d seen before mixed with an equal number of brand new faces. Subjects always studied the faces right-side up. However, at the test, they saw the face presented either right-side up or upside-down.
+
+<p align="center">
+<img src="/images/emo_test.png" alt="f1" style="width:100%;"/>
+</p>
+
 
 Although the sad/happy stories were only shown during the first viewing of the face, they strongly influenced whether participants focused on the global features or the details of the face. People remembered upright faces better when they were associated with a happy story, but they remembered upside down faces better when the faces had been associated with a sad story. Happy associations cause participants to remember global information whereas sad associations cause participants to remember local information. [(Bridge, 2010)](/pdfs/bridge10.pdf)
 
@@ -81,7 +91,7 @@ Although the sad/happy stories were only shown during the first viewing of the f
 ###where does this study fall on the consciousness continuum?
 In this task, subjects had to overtly make a behavioral response about whether they saw a face before or not. The main measure of memory I used was a *conscious* decision to click one of two buttons. However, the influence of emotion on how subjects processed the faces was entirely *unconscious*. Subjects were not aware that they attended to more “local” features of Sad faces and more “global” features of happy faces. However, they likely viewed the faces differently when they studied them (unfortunately I did not have access to an eye tracker at the time of this experiment), which caused them to remember them differently on the final test.
 
-###Take aways
+###real world applications
 * When presenting emotional material, you might have to adjust content so that the right level of details vs. overarching ideas get across the way you want them to.
 * Even though content you are presenting may not have any inherent positive or negative valence, the person you present it to might still have positive or negative associations with a topic that you consider neutral (e.g. memory of college for one person could be filled with happy nostalgia, whereas memory of college for another person could be encompassed by debilitating student debt).
 * What you are currently paying attention to is important when making a decision in the moment. But what you *remember* influences subsequent decisions made by looking back on the event.

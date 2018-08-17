@@ -12,7 +12,7 @@ As the old saying goes: *the eyes are the windows to the brain*.
 Imagine seeing a friend after a few months. immediately, you can tell that something is different. You ask, have you lost weight? Did you get a tan? Oh, you have a new haircut! Even though it may have taken you a few moments to hone in on her new hairstyle, your eyes were probably drawn back to her hair several times before you realized that it was different.
 
 <p align='center'>
-<img src="/images/haircut.png" style="width:100%;"/>
+<img src="/images/haircut.png" style="width:50%;"/>
 </p>
 
 In this scenario, the memory of your old friend guided your eye movement to the changed feature (the haircut), and then your conscious awareness caught up. Lets try to create a play-by-play of what's happening in your mind:
@@ -25,7 +25,7 @@ That might not even be enough detail. At some point, you must have compared the 
 
 I've pioneered an approach that can get us get us this resolution by combining eye movements with direct brain recordings from the memory region of the brain, the *hippocampus*.
 
-### Direct Brain Recordings
+### direct brain recordings
 We know that the hippocampus is important for accessing memories, so we wanted to record its activity as these events unfold. However, several problems arise with the available tools when we try to monitor hippocampal activity. First, it's deep in your head, so we can't use scalp EEG, which mainly provides information about brain activity close to the scalp. Second, we need to capture brain activity really quickly, so we can't use fMRI, which is way too slow. The only technique that can get data in real-time directly from the hippocampus is from electrodes implanted directly into the brain. When this technique is done in humans, it is called *intracranial EEG*.
 
 <p align='center'>
@@ -90,7 +90,7 @@ As far as I know, I'm the only one who does this type of experimentation. I pion
 * Eye movements are at the cusp of conscious vs. unconscious awareness
 * Eye movements reveal what people are thinking and how the brain is processing information
 
-###extrapolation
+###real world applications
 * Eye movements can be harnessed to gain insight into how people learn, what people like, what people pay attention to and what they later remember
 * Eye movements provide a rich data set that can be combined with other measures (feedback, responses)
 * When designing interfaces or physical spaces, use eye movements to determine where people naturally expect information to be stored
