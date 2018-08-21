@@ -1,10 +1,11 @@
 Title: consciousness continuum
 Slug: continuum
-Date: 2018-07-22
+Date: 2018-08-22
 Tags: memory, explicit, implicit, consciousness, cognitive neuroscience, data science
-Image: /images/continuum_big.jpg
+Image: /images/continuum_icon.jpg
+Cover: /images/elephant.jpg
 
-Human behavior arises from both unconscious and conscious sources. A simple example is breathing -- breathing is done automatically. we don’t usually think about inhaling and exhaling.  However, you can take control of your breathing. By commanding your attention to your breath, you can breath quickly or elongate your inhales. This combination of conscious and unconscious processing is an area of intense research. Even researchers who study exclusively conscious cognitive processes (as I do), have to contend with influences of unconscious processing.
+Human behavior arises from both unconscious and conscious sources. A simple example is breathing -- we don’t usually think about inhaling and exhaling.  However, you can take control of your breathing. By commanding your attention to your breath, you can breath quickly or elongate your inhales. This combination of conscious and unconscious processing is an area of intense research. Even researchers who study exclusively conscious cognitive processes (as I do), have to contend with influences of unconscious processing.
 
 A helpful metaphor for understanding human cognition is to think of processes that fall on a *consciousness continuum*. The consciousness continuum goes from completely unconscious neural activity to the fully conscious explanations we articulate about why we do things. My studies have touched upon 4 layers: neural processing, eye movements, behavior (i.e. actions you take), and feedback (i.e. explanations you have for those actions). Incidentally things at the bottom of the consciousness continuum happen at a much much faster time scale than things at the top. As such, studying memory has required a different tools for understanding each layer.
 
@@ -37,9 +38,12 @@ The most common form, scalp EEG, looks like a shower cap. While it has precise t
 ###eye movements
 Eye movements occur more rapidly than you might think. You look at 3 to 5 distinct places every second. You are only consciously aware of only a subset of these movements. Different processes (e.g. perception, attention, and memory) can dictate what you look at and when, before you have the chance to make a conscious decision about where to look.
 
-For example, imagine a small child did something wrong -- he broke the cookie jar and crudely hid it behind a chair. You ask, what happened to the cookie jar? He doesn’t say anything, but you know immediately by his gaze where the cookie jar remnants are. His eyes couldn’t help but look at the evidence. [I've designed experiments to directly measure this phenomena](eyes.html).
+For example, imagine a small child did something wrong -- he broke the cookie jar and crudely hid it behind a chair. You ask, what happened to the cookie jar? He doesn’t say anything, but you know immediately by his gaze where the cookie jar remnants are. His eyes couldn’t help but look at the evidence. [I've designed experiments to directly measure this phenomena](eyes.html){:target="_blank"}.
 
-![fig2](/images/cookie.png)
+<div class="center_pic">
+<img class="icon" src='/images/cookie.png'>
+</div>
+
 
 Of course we also move our eyes deliberately to certain locations. We can choose to look at a painting or choose to look under the couch for the tv remote. The main point is, eye movements can provide rich information about what a person might be thinking as their thoughts unfold.
 

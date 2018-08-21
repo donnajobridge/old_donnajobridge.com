@@ -1,12 +1,14 @@
 Title: memory is malleable
 Slug: update
-Date: 2018-07-25
+Date: 2018-08-20
 Tags: memory, updating, false memory, cognitive neuroscience, data science
 Image: /images/update_icon.jpg
+Cover: /images/elephant.jpg
 
 Do you have a friend who tells the same story at every party? Have you noticed how on each iteration the sky gets darker, the water gets deeper, and the guppy slowly morphs into a whale? Does this mean your friend is a big fat liar? Well maybe a little. But, this is also a natural feature of our memory. It turns out our memories are not static representations of past events like a photo or a video recording, but they dynamically change every time you think about them.
 
 It may seem troublesome that we don’t keep accurate representations of the past stored in our memories -- but I would argue that this is actually an adaptive process that allows us to cope with our constantly-changing situations. For instance, if our memories stayed the same and never changed, you would never learn that your partner is now 20 years older than when you met him, because the younger version of him would prevail in your memory — it would never get updated with constantly changing information (gray hair, wrinkles around the eyes, etc.).
+
 
 ![fig1](/images/telephone_fishing.png)
 
@@ -26,11 +28,11 @@ I designed the experiment to examine how a memory shifts each time we remember i
 
 ![fig2](/images/telephone_spatial.jpg)
 
-First I looked at *forgetting* by seeing how far away they placed the object over the three-day period. For this analysis, I simply measured the distance each object was placed from its original location on each of the tests at Day 1, Day 2, and Day 3. Interestingly, there was a big drop in performance from Day 1 to Day 2, but forgetting leveled off, as memory declined substantially less from Day 2 to Day 3. These results suggest that after an event, our memory drops off immediately, and we forget a lot of the details and context information. But after that initial drop-off period, our memories maintain stability. These results are in line with other studies of memory consolidation that show that older memories are more stable than newer memories. It also resembles the classic [Ebbinghause forgetting curve](https://en.wikipedia.org/wiki/Forgetting_curve), which shows a steep drop-off in accuracy immediately after learning and then levels off as time goes on.
+First I looked at *forgetting* by seeing how far away they placed the object over the three-day period. For this analysis, I simply measured the distance each object was placed from its original location on each of the tests at Day 1, Day 2, and Day 3. Interestingly, there was a big drop in performance from Day 1 to Day 2, but forgetting leveled off, as memory declined substantially less from Day 2 to Day 3. These results suggest that after an event, our memory drops off immediately, and we forget a lot of the details and context information. But after that initial drop-off period, our memories maintain stability. These results are in line with other studies of memory consolidation that show that older memories are more stable than newer memories. It also resembles the classic [Ebbinghause forgetting curve](https://en.wikipedia.org/wiki/Forgetting_curve){:target="_blank"}, which shows a steep drop-off in accuracy immediately after learning and then levels off as time goes on.
 
 ![fig3](/images/react_kdeForgetting.png)
 
-Next I looked at how each test influenced the content of memory on each subsequent test. For this analysis, I looked at final memory outcome on the Day 3 test. I measured the distance each object was placed from 3 different locations: the originally studied location, the location subjects placed the object on the Day 1 test, and the location subjects placed the object on the Day 2 test. In this way, I could see how each of these experiences influenced where subjects placed the object on the final Day 3 test. Interestingly, the results showed increasing influence of the most recent test on final memory performance. Subjects placed objects closest to the Day 2 test location, followed by the Day 1 test location, and farthest from the originally studied location. [(Bridge, 2012)](/pdfs/bridge12.pdf)
+Next I looked at how each test influenced the content of memory on each subsequent test. For this analysis, I looked at final memory outcome on the Day 3 test. I measured the distance each object was placed from 3 different locations: the originally studied location, the location subjects placed the object on the Day 1 test, and the location subjects placed the object on the Day 2 test. In this way, I could see how each of these experiences influenced where subjects placed the object on the final Day 3 test. Interestingly, the results showed increasing influence of the most recent test on final memory performance. Subjects placed objects closest to the Day 2 test location, followed by the Day 1 test location, and farthest from the originally studied location. [(Bridge, 2012)](/pdfs/bridge12.pdf){:target="_blank"}
 
 ![fig4](/images/react_kdeUpdating.png)
 
@@ -46,27 +48,27 @@ In this new study, I implemented 2 different conditions. First, subjects studied
 If the updating effect I saw in the first study was really just about recency, it shouldn’t matter if I show subjects the wrong location or that mistakenly recall the wrong location -- they should remember the most recently encountered location on the final test. On the other hand, if updating only happens when we actively remember the wrong location, then subjects should only choose the updated location in the Active condition, but not the Passive condition.
 
 ###results
-It turns out remembering events is really special. Subjects were not easily tricked into thinking the wrong location I selected was the object’s original location. In the Passive location, subjects disproportionately chose the original location over the other options. However, updating was prevalent in the Active condition. Subjects usually chose the updated (incorrectly remembered) location on the final test instead of the other choices. These results show that remembering events provides an opportunity to update them. The good news is that we are not easily fooled by incorrect information that does not match our memories. [(Bridge, 2014 (1))](/pdfs/bridge14jon.pdf)
+It turns out remembering events is really special. Subjects were not easily tricked into thinking the wrong location I selected was the object’s original location. In the Passive location, subjects disproportionately chose the original location over the other options. However, updating was prevalent in the Active condition. Subjects usually chose the updated (incorrectly remembered) location on the final test instead of the other choices. These results show that remembering events provides an opportunity to update them. The good news is that we are not easily fooled by incorrect information that does not match our memories. [(Bridge, 2014 (1))](/pdfs/bridge14jon.pdf){:target="_blank"}
 
-<p align='center'>
-<img src="/images/cxtup_swarm.png" alt="fig6" style="width:75%;"/>
-</p>
+<div class="center_pic">
+<img class="icon" src='/images/cxtup_swarm.png'>
+</div>
 
 ###where does this study fall on the consciousness continuum?
 These studies involved explicit responses from participants. On each test, I explicitly asked participants to place the objects back in their original locations. On the final test, they tended to erroneously remember the previously remembered location rather than the original location. I would argue that the process of memory updating was unconscious. Subjects were not aware that their memory changed each time I tested them. These studies goes to show that even when we do some explicit actions (intentionally remembering an event), new information can seep into those memories due to unconscious processes happening in our brain.
 
 ###main points
 * There’s no true unadulterated original version memory stored in your brain, unless it was never accessed (remembered). But if that were the case, it would probably be buried or forgotten.
-* Our memories are engineered to change. This is adaptive, and helps us learn new information quickly and efficiently. [(Bridge, 2014 (2))](/pdfs/bridge14nsy.pdf)
+* Our memories are engineered to change. This is adaptive, and helps us learn new information quickly and efficiently. [(Bridge, 2014 (2))](/pdfs/bridge14nsy.pdf){:target="_blank"}
 
 ###press links
-* [npr](https://www.npr.org/sections/health-shots/2014/02/04/271527934/our-brains-rewrite-our-memories-putting-present-in-the-past)
-* [la times](http://www.latimes.com/science/sciencenow/la-sci-sn-memory-updating-20140204-story.html#axzz2sSngvyz8)
-* [wgn](https://wgntv.com/2014/02/04/study-minds-incorporate-new-information-into-original-memories/)
+* [npr](https://www.npr.org/sections/health-shots/2014/02/04/271527934/our-brains-rewrite-our-memories-putting-present-in-the-past){:target="_blank"}
+* [la times](http://www.latimes.com/science/sciencenow/la-sci-sn-memory-updating-20140204-story.html#axzz2sSngvyz8){:target="_blank"}
+* [wgn](https://wgntv.com/2014/02/04/study-minds-incorporate-new-information-into-original-memories/){:target="_blank"}
 * [wttw](https://chicagotonight.wttw.com/2012/10/31/distorted-memories)
-* [cnn](http://thechart.blogs.cnn.com/2012/09/20/your-memory-is-like-a-game-of-telephone/)
+* [cnn](http://thechart.blogs.cnn.com/2012/09/20/your-memory-is-like-a-game-of-telephone/){:target="_blank"}
 
 
 ###data & analysis
-* [experiment 1](https://github.com/donnajobridge/data_visualizations/tree/master/react)
-* [experiment 2](https://github.com/donnajobridge/data_visualizations/tree/master/cxtupdate)
+* [experiment 1](https://github.com/donnajobridge/data_visualizations/tree/master/react){:target="_blank"}
+* [experiment 2](https://github.com/donnajobridge/data_visualizations/tree/master/cxtupdate){:target="_blank"}

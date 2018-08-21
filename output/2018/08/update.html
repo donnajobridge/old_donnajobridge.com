@@ -1,0 +1,2428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>memory is malleable</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="../../" rel="canonical" />
+  <style>
+  /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+
+  .column {
+      float: left;
+      padding-bottom: 5%;
+      /* padding: 50px; */
+      padding-left:.5em;
+  }
+
+  .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+  }
+
+  .icon {
+      width: 40%;
+      float: center;
+      text-align: center;
+      /* height: 50px; */
+  }
+
+
+  .icon2 {
+      width: 40%;
+      float: right;
+      text-align:center;
+      color: #188FA7;
+      /* height: 50px; */
+  }
+
+  .icon_column {
+      float: left;
+      /* padding-bottom: 5%; */
+      width: 20%;
+      padding-left:3%;
+  }
+  .icon_row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+  .icon-bar a {
+    /* float: left; */
+    width: 25%;
+    text-align: center;
+    padding-top: 3%;
+    padding-left: 0%;
+    padding-right: 0%;
+    padding-bottom: 3%;
+    transition: all 0.1s ease;
+    color: black;
+    /* font-size: 36px; */
+  }
+
+    .icon_big {
+        width: 55%;
+        /* float: left; */
+        padding-top: 0%;
+        /* height: 50px; */
+    }
+    .icon_title_big {
+        width: 40%;
+        padding-top: 0%;
+        /* float: left; */
+        /* height: 200px; */
+    }
+    .left_pic {
+        width: 45%;
+        float: left;
+        padding-top: 0px;
+        /* height: 50px; */
+    }
+
+    .right_pic {
+        width: 45%;
+        float: right;
+        padding-top: 0px;
+        /* height: 50px; */
+    }
+
+    .center_pic {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+      }
+      .center_pic50 {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          width: 50%;
+        }
+
+    .pic_3 {
+        width: 28%;
+        /* float: left; */
+        padding-top: 0px;
+        padding-left: 5%;
+
+        /* height: 50px; */
+    }
+
+
+    #similar {
+        background: #black;
+        height:150px;
+    }
+
+  html {
+      font-family: sans-serif;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%
+  }
+
+  body {
+      margin: 0
+  }
+
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  main,
+  nav,
+  section,
+  summary {
+      display: block
+  }
+
+  audio,
+  canvas,
+  progress,
+  video {
+      display: inline-block;
+      vertical-align: baseline
+  }
+
+  audio:not([controls]) {
+      display: none;
+      height: 0
+  }
+
+  [hidden],
+  template {
+      display: none
+  }
+
+  a {
+      background: 0 0
+  }
+
+  a:active,
+  a:hover {
+      outline: 0
+  }
+
+  abbr[title] {
+      border-bottom: 1px dotted
+  }
+
+  b,
+  strong {
+      font-weight: 700
+  }
+
+  dfn {
+      font-style: italic
+  }
+
+  h1 {
+      font-size: 2em;
+      margin: .67em 0
+  }
+
+  mark {
+      background: #ff0;
+      color: #000
+  }
+
+  small {
+      font-size: 80%
+  }
+
+  sub,
+  sup {
+      font-size: 75%;
+      line-height: 0;
+      position: relative;
+      vertical-align: baseline
+  }
+
+  sup {
+      top: -.5em
+  }
+
+  sub {
+      bottom: -.25em
+  }
+
+  img {
+      border: 0
+  }
+
+  svg:not(:root) {
+      overflow: hidden
+  }
+
+  figure {
+      margin: 1em 40px
+  }
+
+  hr {
+      box-sizing: content-box;
+      height: 0
+  }
+
+  pre {
+      overflow: auto
+  }
+
+  code,
+  kbd,
+  pre,
+  samp {
+      font-family: monospace, monospace;
+      font-size: 1em
+  }
+
+  button,
+  input,
+  optgroup,
+  select,
+  textarea {
+      color: inherit;
+      font: inherit;
+      margin: 0
+  }
+
+  button {
+      overflow: visible
+  }
+
+  button,
+  select {
+      text-transform: none
+  }
+
+  button,
+  html input[type=button],
+  input[type=reset],
+  input[type=submit] {
+      -webkit-appearance: button;
+      cursor: pointer
+  }
+
+  button[disabled],
+  html input[disabled] {
+      cursor: default
+  }
+
+  button::-moz-focus-inner,
+  input::-moz-focus-inner {
+      border: 0;
+      padding: 0
+  }
+
+  input {
+      line-height: normal
+  }
+
+  input[type=checkbox],
+  input[type=radio] {
+      box-sizing: border-box;
+      padding: 0
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+      height: auto
+  }
+
+  input[type=search] {
+      -webkit-appearance: textfield;
+      box-sizing: content-box
+  }
+
+  input[type=search]::-webkit-search-cancel-button,
+  input[type=search]::-webkit-search-decoration {
+      -webkit-appearance: none
+  }
+
+  fieldset {
+      border: 1px solid silver;
+      margin: 0 2px;
+      padding: .35em .625em .75em
+  }
+
+  legend {
+      border: 0;
+      padding: 0
+  }
+
+  textarea {
+      overflow: auto
+  }
+
+  optgroup {
+      font-weight: 700
+  }
+
+  table {
+      border-collapse: collapse;
+      border-spacing: 0
+  }
+
+  td,
+  th {
+      padding: 0
+  }
+
+  @font-face {
+      font-family: 'icons';
+      src: url("../font/icons.eot?51058516");
+      src: url("../font/icons.eot?51058516#iefix") format("embedded-opentype"), url("../font/icons.woff?51058516") format("woff"), url("../font/icons.ttf?51058516") format("truetype"), url("../font/icons.svg?51058516#icons") format("svg");
+      font-weight: normal;
+      font-style: normal
+  }
+
+  [class^="ic-"]:before,
+  [class*=" ic-"]:before {
+      font-family: 'icons';
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1em;
+      margin-left: .2em
+  }
+
+  .ic-star:before {
+      content: '\e800'
+  }
+
+  .ic-rss:before {
+      content: '\e801'
+  }
+
+  .ic-posts:before {
+      content: '\e802'
+  }
+
+  .ic-location:before {
+      content: '\e803'
+  }
+
+  .ic-link:before {
+      content: '\e804'
+  }
+
+  .ic-googleplus:before {
+      content: '\e805'
+  }
+
+  .ic-facebook:before {
+      content: '\e806'
+  }
+
+  .ic-arrow-right:before {
+      content: '\e807'
+  }
+
+  .ic-arrow-left:before {
+      content: '\e808'
+  }
+
+  .ic-twitter:before {
+      content: '\e809'
+  }
+
+  .ic-menu:before {
+      content: '\e80a'
+  }
+
+  @font-face {
+      font-family: 'Cardo';
+      font-style: normal;
+      font-weight: 400;
+      src: local("Cardo"), local("Cardo-Regular"), url("//fonts.gstatic.com/s/cardo/v8/f9GbO0_LnwwuaRC6yAh0JKCWcynf_cDxXwCLxiixG1c.woff2") format("woff2"), url("//fonts.gstatic.com/s/cardo/v8/c6Zi_ulq7hv-avk-G9Yut6CWcynf_cDxXwCLxiixG1c.woff") format("woff")
+  }
+
+  @font-face {
+      font-family: 'Cardo';
+      font-style: normal;
+      font-weight: 700;
+      src: local("Cardo Bold"), local("Cardo-Bold"), url("//fonts.gstatic.com/s/cardo/v8/X-1BEHTKpRYzad3JEXy9-nYhjbSpvc47ee6xR_80Hnw.woff2") format("woff2"), url("//fonts.gstatic.com/s/cardo/v8/gHC1KgRPdVNdvvVcxLMCY3YhjbSpvc47ee6xR_80Hnw.woff") format("woff")
+  }
+
+  @font-face {
+      font-family: 'Cardo';
+      font-style: italic;
+      font-weight: 400;
+      src: local("Cardo Italic"), local("Cardo-Italic"), url("//fonts.gstatic.com/s/cardo/v8/aRpKelDgx13ov6asvC3QbgLUuEpTyoUstqEm5AMlJo4.woff2") format("woff2"), url("//fonts.gstatic.com/s/cardo/v8/mSKSxAIybPTfRoik7xAeTQLUuEpTyoUstqEm5AMlJo4.woff") format("woff")
+  }
+
+  @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 400;
+      src: local("Fira Sans"), local("FiraSans-Regular"), url("//fonts.gstatic.com/s/firasans/v5/EjsrzDkQUQCDwsBtLpcVQZBw1xU1rKptJj_0jans920.woff2") format("woff2"), url("//fonts.gstatic.com/s/firasans/v5/EjsrzDkQUQCDwsBtLpcVQbO3LdcAZYWl9Si6vvxL-qU.woff") format("woff")
+  }
+
+  @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 500;
+      src: local("Fira Sans Medium"), local("FiraSans-Medium"), url("//fonts.gstatic.com/s/firasans/v5/zM2u8V3CuPVwAAXFQcDi4Bampu5_7CjHW5spxoeN3Vs.woff2") format("woff2"), url("//fonts.gstatic.com/s/firasans/v5/zM2u8V3CuPVwAAXFQcDi4KRDOzjiPcYnFooOUGCOsRk.woff") format("woff")
+  }
+
+  @font-face {
+      font-family: 'Fira Sans';
+      font-style: normal;
+      font-weight: 700;
+      src: local("Fira Sans Bold"), local("FiraSans-Bold"), url("//fonts.gstatic.com/s/firasans/v5/DugPdSljmOTocZOR2CItOhampu5_7CjHW5spxoeN3Vs.woff2") format("woff2"), url("//fonts.gstatic.com/s/firasans/v5/DugPdSljmOTocZOR2CItOqRDOzjiPcYnFooOUGCOsRk.woff") format("woff")
+  }
+
+  .hljs {
+      display: block;
+      color: #66645c;
+      -webkit-text-size-adjust: none
+  }
+
+  .hljs-comment,
+  .diff .hljs-header,
+  .hljs-javadoc {
+      color: #998;
+      font-style: italic
+  }
+
+  .hljs-keyword,
+  .css .rule .hljs-keyword,
+  .hljs-winutils,
+  .nginx .hljs-title,
+  .hljs-subst,
+  .hljs-request,
+  .hljs-status {
+      color: #333;
+      font-weight: bold
+  }
+
+  .hljs-number,
+  .hljs-hexcolor,
+  .ruby .hljs-constant {
+      color: #008080
+  }
+
+  .hljs-string,
+  .hljs-tag .hljs-value,
+  .hljs-phpdoc,
+  .hljs-dartdoc,
+  .tex .hljs-formula {
+      color: #d14
+  }
+
+  .hljs-title,
+  .hljs-id,
+  .scss .hljs-preprocessor {
+      color: #900;
+      font-weight: bold
+  }
+
+  .hljs-list .hljs-keyword,
+  .hljs-subst {
+      font-weight: normal
+  }
+
+  .hljs-class .hljs-title,
+  .hljs-type,
+  .vhdl .hljs-literal,
+  .tex .hljs-command {
+      color: #458;
+      font-weight: bold
+  }
+
+  .hljs-tag,
+  .hljs-tag .hljs-title,
+  .hljs-rule .hljs-property,
+  .django .hljs-tag .hljs-keyword {
+      color: #000080;
+      font-weight: normal
+  }
+
+  .hljs-attribute,
+  .hljs-variable,
+  .lisp .hljs-body,
+  .hljs-name {
+      color: #008080
+  }
+
+  .hljs-regexp {
+      color: #009926
+  }
+
+  .hljs-symbol,
+  .ruby .hljs-symbol .hljs-string,
+  .lisp .hljs-keyword,
+  .clojure .hljs-keyword,
+  .scheme .hljs-keyword,
+  .tex .hljs-special,
+  .hljs-prompt {
+      color: #990073
+  }
+
+  .hljs-built_in {
+      color: #0086b3
+  }
+
+  .hljs-preprocessor,
+  .hljs-pragma,
+  .hljs-pi,
+  .hljs-doctype,
+  .hljs-shebang,
+  .hljs-cdata {
+      color: #999;
+      font-weight: bold
+  }
+
+  .hljs-deletion {
+      background: #fdd
+  }
+
+  .hljs-addition {
+      background: #dfd
+  }
+
+  .diff .hljs-change {
+      background: #0086b3
+  }
+
+  .hljs-chunk {
+      color: #aaa
+  }
+
+  @supports ((-ms-flex-wrap: wrap) or (flex-wrap: wrap)) {
+      body {
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          min-height: 100vh
+      }
+      #wrapper {
+          -ms-flex: 1;
+          flex: 1
+      }
+  }
+
+  html {
+      font-size: 62.5%;
+      overflow-x: hidden
+  }
+
+  html.menu-active,
+  .menu-active body {
+      overflow-y: hidden
+  }
+
+  body {
+      font: 400 2em / 1.5em 'Cardo', serif;
+      color: #45484d;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden
+  }
+
+  a {
+      color: #212226;
+      text-decoration: none;
+      font-weight: 400;
+      transition: all ease-out 0.2s
+  }
+
+  a:hover,
+  a:focus {
+      color: #000
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      font-family: 'Fira Sans', sans-serif;
+      text-rendering: optimizeLegibility;
+      color: #000
+  }
+
+  h1 {
+      font-size: 2em;
+      line-height: 1em;
+      text-indent: -1px;
+      margin: 2em 0 -0.5em
+  }
+
+  h2 {
+      font-size: 1.75em;
+      line-height: 1.111em;
+      text-indent: -1px;
+      margin: 2.286em 0 -0.571em
+  }
+
+  h3 {
+      font-size: 1.5em;
+      line-height: 1.333em;
+      margin: 2em 0 -0.666em
+  }
+
+  h4 {
+      font-size: 1.25em;
+      line-height: 1.2em;
+      margin: 2.4em 0 -0.8em
+  }
+
+  h1 a,
+  h2 a,
+  h3 a,
+  h4 a,
+  h5 a,
+  h6 a {
+      font-weight: inherit
+  }
+
+  p,
+  ul,
+  ol {
+      margin: 2em auto
+  }
+
+  ul {
+      list-style: none
+  }
+
+  li {
+      position: relative
+  }
+
+  ul>li:before,
+  ol>li:before {
+      position: absolute;
+      width: 1.5em;
+      margin-left: -2em;
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 1em;
+      font-weight: 500;
+      line-height: 1.5em;
+      text-align: right;
+      color: #000
+  }
+
+  ul>li:before {
+      margin-top: 0.25em;
+      content: '*'
+  }
+
+  ol {
+      list-style-type: none;
+      counter-reset: item
+  }
+
+  ol>li:before {
+      content: counter(item) ". " !important;
+      counter-increment: item
+  }
+
+  ol ol,
+  ul ul,
+  ul ol,
+  ol ul {
+      padding-left: 30px;
+      margin: 15px 0
+  }
+
+  hr {
+      display: block;
+      height: 1px;
+      margin: 2em 0;
+      padding: 0;
+      background: #e5e4e1;
+      border: 0
+  }
+
+  blockquote {
+      margin: 2em auto;
+      padding: 1em;
+      box-sizing: border-box;
+      border-left: 0.25em solid #e5e4e1;
+      font-style: italic;
+      font-weight: 400;
+      color: #45484d;
+      background: #faf9f7
+  }
+
+  blockquote p {
+      margin: 1em auto
+  }
+
+  blockquote p:first-child {
+      margin-top: 0
+  }
+
+  blockquote p:last-child {
+      margin-bottom: 0
+  }
+
+  em,
+  i {
+      font-style: italic;
+      color: #212226
+  }
+
+  strong,
+  b {
+      font-weight: 700;
+      color: #212226
+  }
+
+  small {
+      font-size: 0.9em;
+      color: #45484d
+  }
+
+  dl {
+      margin: 20px 0
+  }
+
+  dl dt {
+      float: left;
+      width: 180px;
+      overflow: hidden;
+      clear: left;
+      text-align: right;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: bold;
+      margin-bottom: 10px
+  }
+
+  dl dd {
+      margin-left: 200px;
+      margin-bottom: 12px
+  }
+
+  mark {
+      background-color: #ffc336
+  }
+
+  code,
+  tt {
+      position: relative;
+      margin: 0 0.333em;
+      padding: 0.333em 0.666em;
+      font-family: 'Inconsolata', monospace, sans-serif;
+      font-size: 0.75em;
+      white-space: pre;
+      background: #faf9f7;
+      border: 1px solid #e5e4e1;
+      top: -2px
+  }
+
+  pre {
+      position: relative;
+      margin: 2em auto;
+      padding: 1em;
+      overflow: hidden;
+      font-family: 'Inconsolata', monospace, sans-serif;
+      white-space: pre;
+      background: #faf9f7;
+      border: 1px solid #e5e4e1;
+      box-sizing: border-box
+  }
+
+  pre .lines {
+      position: absolute;
+      width: 2.666em;
+      height: 100%;
+      left: 0;
+      top: 0;
+      padding: 1.333em 0;
+      border-right: 1px solid #e5e4e1;
+      font-size: 0.75em;
+      line-height: 2em;
+      text-align: right;
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.5)
+  }
+
+  pre .lines .line {
+      display: block;
+      padding-right: 0.333em;
+      color: #45484d
+  }
+
+  pre code,
+  pre tt {
+      position: static;
+      top: auto;
+      margin: -1.333em -1.333em -1.333em 1.333em;
+      padding: 1.333em;
+      overflow: scroll;
+      font-size: 0.75em;
+      line-height: 2em;
+      white-space: pre;
+      background: transparent;
+      border: none;
+      vertical-align: inherit
+  }
+
+  kbd {
+      display: inline-block;
+      margin-bottom: 0.5em;
+      padding: 1px 8px;
+      border: #e5e4e1 1px solid;
+      color: #45484d;
+      text-shadow: #fff 0 1px 0;
+      font-size: 0.9em;
+      font-weight: bold;
+      background: #faf9f7;
+      border-radius: 4px;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset
+  }
+
+  table {
+      width: 100%;
+      max-width: 100%;
+      margin: 2em 0;
+      background-color: transparent;
+      border: 1px solid #e5e4e1
+  }
+
+  table th,
+  table td {
+      position: relative;
+      padding: 0.5em;
+      line-height: 0.95em;
+      text-align: left;
+      border: 1px solid #e5e4e1
+  }
+
+  table th {
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 500;
+      font-size: 0.75em;
+      line-height: 1.25em;
+      padding: 0.666em;
+      color: #000
+  }
+
+  table td:after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: -1px;
+      top: -1px;
+      padding: 1px;
+      z-index: -1;
+      content: '';
+      background: #faf9f7
+  }
+
+  img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 2.5em auto
+  }
+
+  .clear {
+      clear: both
+  }
+
+  .hidden {
+      display: none
+  }
+
+  @keyframes fadein {
+      0% {
+          opacity: .2
+      }
+      100% {
+          opacity: .9
+      }
+  }
+
+  #blog-header {
+      position: relative;
+      padding: 6em 0;
+      text-align: center
+  }
+
+  #blog-header:after {
+      position: absolute;
+      width: 32em;
+      height: 1px;
+      left: 50%;
+      bottom: 0;
+      margin-left: -16em;
+      content: '';
+      background: #e5e4e1
+  }
+
+  #blog-header.has-cover {
+      padding: 9em 0 10em;
+      background: #000;
+      overflow: hidden;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+  }
+
+  .author-template #blog-header:after,
+  #blog-header.has-cover:after {
+      display: none
+  }
+
+  .paged #blog-header.has-cover,
+  .tag-template #blog-header {
+      padding: 4em 0
+  }
+
+  .author-template #blog-header.has-cover {
+      padding: 6em 0
+  }
+
+  .blog-cover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 5;
+      background: no-repeat scroll center center/cover #000;
+      animation: 0.5s ease-in forwards fadein
+  }
+
+  .blog-cover:after {
+      position: absolute;
+      width: 100%;
+      height: 6em;
+      left: 0;
+      bottom: 0;
+      z-index: 8;
+      content: '';
+      background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%)
+  }
+
+  .blog-logo {
+      position: fixed;
+      max-width: 2em;
+      left: 0;
+      top: 0;
+      margin: 1em;
+      z-index: 200
+  }
+
+  .blog-logo img {
+      display: block;
+      margin: 0 auto
+  }
+
+  .blog-name {
+      position: relative;
+      display: block;
+      z-index: 10;
+      margin: 0;
+      padding: 0;
+      font-family: 'Fira Sans', sans-serif;
+      font-weight: 700;
+      font-size: 2em;
+      line-height: 1em;
+      text-decoration: none
+  }
+
+  .home-template .blog-name {
+      font-size: 3em
+  }
+
+  .has-cover .blog-name {
+      color: #fff
+  }
+
+  .blog-name a {
+      text-decoration: none;
+      font-weight: inherit;
+      color: inherit
+  }
+
+  .blog-description {
+      position: relative;
+      display: block;
+      z-index: 10;
+      margin: 0.25em 0;
+      padding: 0;
+      font-size: 1em;
+      line-height: 1.5em
+  }
+
+  .home-template .blog-description {
+      font-size: 1.5em
+  }
+
+  .has-cover .blog-description {
+      color: #fff
+  }
+
+  #wrapper {
+      position: relative;
+      padding-right: 0;
+      transition: all ease-out 0.25s
+  }
+
+  #wrapper .hidden-close {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 350
+  }
+
+  .menu-active #wrapper {
+      padding-right: 16em
+  }
+
+  .menu-active #wrapper .hidden-close {
+      display: block
+  }
+
+  .inner {
+      max-width: 32em;
+      margin: 0 auto;
+      padding: 0 2em
+  }
+
+  .nav-button {
+      position: fixed;
+      top: 0;
+      margin: 1em;
+      z-index: 200
+  }
+
+  .nav-button#home-button {
+      left: 0
+  }
+
+  .nav-button#menu-button {
+      right: 0
+  }
+
+  .nav-button a {
+      display: block;
+      height: 1.5em;
+      margin-bottom: 1em;
+      padding: 0.5em 1.25em;
+      border: 1px solid #c2c7cc;
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 0.75em;
+      line-height: 1.666em;
+      text-shadow: none;
+      color: #8a9199;
+      cursor: pointer;
+      background: #fff;
+      transition: color, border-color ease 0.3s;
+      border-radius: 2em
+  }
+
+  .nav-button a:hover,
+  .nav-button a:focus {
+      color: #f26a3d;
+      border-color: #f26a3d
+  }
+
+  .cover-active .nav-button a {
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.5);
+      background: transparent
+  }
+
+  .cover-active .nav-button a:hover,
+  .cover-active .nav-button a:focus {
+      color: #fff;
+      border-color: #fff
+  }
+
+  .nav-button a i {
+      display: inline-block;
+      color: inherit
+  }
+
+  .nav-button a i:before {
+      position: relative;
+      width: auto;
+      top: -2px;
+      margin: auto;
+      font-size: 0.625em;
+      line-height: 1.6em
+  }
+
+  #menu {
+      position: fixed;
+      width: 16em;
+      height: 100%;
+      top: 0;
+      right: 0;
+      background: #f2f2f0;
+      border-left: 1px solid #e5e4e1;
+      z-index: 400;
+      overflow: hidden;
+      font-family: 'Fira Sans', sans-serif;
+      box-shadow: inset -2px 0 7px rgba(0, 0, 0, 0.1);
+      transform: translate3d(16em, 0, 0);
+      transition: all ease-out 0.25s
+  }
+
+  .menu-active #menu {
+      transform: translate3d(0, 0, 0)
+  }
+
+  #menu .close-button {
+      position: absolute;
+      width: 2em;
+      height: 2em;
+      top: 0;
+      right: 0;
+      margin: 1em;
+      border: 1px solid #c2c7cc;
+      color: transparent;
+      cursor: pointer;
+      transition: all ease 0.3s;
+      border-radius: 2em;
+      box-sizing: border-box;
+      z-index: 500
+  }
+
+  #menu .close-button:hover,
+  #menu .close-button:focus {
+      transform: rotate(180deg);
+      border-color: #f26a3d
+  }
+
+  #menu .close-button:after,
+  #menu .close-button:before {
+      position: absolute;
+      width: 1em;
+      height: 1px;
+      left: 50%;
+      top: 50%;
+      margin-left: -0.5em;
+      content: '';
+      background: #8a9199;
+      transition: all ease 0.3s
+  }
+
+  #menu .close-button:hover:after,
+  #menu .close-button:hover:before,
+  #menu .close-button:focus:after,
+  #menu .close-button:focus:before {
+      background: #f26a3d
+  }
+
+  #menu .close-button:after {
+      transform: rotate(45deg)
+  }
+
+  #menu .close-button:before {
+      transform: rotate(-45deg)
+  }
+
+  #menu .nav-wrapper {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      box-sizing: border-box
+  }
+
+  #menu .nav-label {
+      display: block;
+      padding: 1.666em 2em;
+      margin: 0;
+      opacity: 0.5;
+      font-size: 0.75em;
+      line-height: 2em
+  }
+
+  #menu ul {
+      position: relative;
+      width: 100%;
+      margin: auto;
+      padding: 0
+  }
+
+  #menu li {
+      position: relative
+  }
+
+  #menu li:before {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      left: 1.5em;
+      bottom: 0;
+      margin: auto;
+      content: '';
+      background: rgba(0, 0, 0, 0.1)
+  }
+
+  #menu li:last-child:before {
+      display: none
+  }
+
+  #menu li.active:after {
+      position: absolute;
+      content: '';
+      width: 0.2em;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: #f26a3d
+  }
+
+  #menu li a {
+      display: block;
+      padding: 1.25em 1.5em;
+      color: #212226;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-weight: 400
+  }
+
+  #menu li a:hover,
+  #menu li a:focus {
+      color: #000;
+      background: rgba(0, 0, 0, 0.05)
+  }
+
+  #menu li a i {
+      position: relative;
+      top: -0.25em;
+      font-size: 0.5em;
+      color: inherit
+  }
+
+  #menu li.active a {
+      color: #000;
+      font-weight: 500
+  }
+
+  .progress-container {
+      position: fixed;
+      width: 100%;
+      height: 4px;
+      left: 0;
+      top: 0;
+      z-index: 1000;
+      background: transparent;
+      transition: opacity ease-out 1s
+  }
+
+  .progress-container.ready {
+      opacity: 0.2
+  }
+
+  .progress-bar {
+      display: block;
+      width: 0;
+      height: 1px;
+      background: #f26a3d;
+      box-shadow: 0 0 1px #f26a3d, 0 0 3px #f26a3d
+  }
+
+  #footer {
+      position: relative;
+      z-index: 20;
+      font-family: 'Fira Sans', sans-serif;
+      line-height: 1em;
+      padding-bottom: 6em
+  }
+
+  .credits {
+      text-align: center;
+      font-size: 0.625em;
+      line-height: 1em;
+      padding: 1.1em 0;
+      overflow: auto;
+      opacity: 0.5
+  }
+
+  .credits a {
+      color: inherit
+  }
+
+  .credits span {
+      display: block
+  }
+
+  .credits-theme {
+      float: left
+  }
+
+  .credits-software {
+      float: right
+  }
+
+  #blog-author {
+      position: relative;
+      z-index: 40;
+      margin: auto 6em
+  }
+
+  #blog-author:after {
+      position: absolute;
+      width: 32em;
+      height: 1px;
+      left: 50%;
+      bottom: 0;
+      margin-left: -16em;
+      content: '';
+      background: #e5e4e1
+  }
+
+  #blog-author .post-author {
+      margin-top: -5em;
+      padding-bottom: 3em;
+      border: 0
+  }
+
+  #blog-author .post-author-avatar {
+      width: 20%;
+      margin: 0 2.5%
+  }
+
+  #blog-author.has-cover .post-author-avatar {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+  }
+
+  #blog-author.has-cover .post-author-avatar img {
+      border: 0.125em solid #fff
+  }
+
+  #blog-author .post-author-name {
+      padding: 0.333em 0 0;
+      font-size: 2em;
+      line-height: 1em
+  }
+
+  #blog-author.has-cover .post-author-name {
+      padding: 0.333em 0;
+      font-weight: 500;
+      letter-spacing: 0.025em;
+      line-height: 1.333em;
+      color: #fff
+  }
+
+  #blog-author.has-cover .post-author-about {
+      margin-top: 1.333em
+  }
+
+  .container {
+      position: relative
+  }
+
+  .container .post {
+      padding: 4em 0
+  }
+
+  .container .post:after {
+      position: absolute;
+      width: 32em;
+      height: 1px;
+      left: 50%;
+      bottom: 0;
+      margin-left: -16em;
+      content: '';
+      background: #e5e4e1
+  }
+
+  .container .post.featured .post-title:after {
+      position: absolute;
+      width: 1em;
+      height: 1em;
+      left: -1.75em;
+      top: 0;
+      margin-top: -0.25em;
+      font-family: 'icons';
+      font-size: 0.5em;
+      font-style: normal;
+      font-weight: normal;
+      content: '\e800';
+      color: inherit;
+      text-align: center;
+      color: #e5e4e1
+  }
+
+  .post.page {
+      padding-bottom: 4em
+  }
+
+  .page-template #footer:after {
+      position: absolute;
+      width: 32em;
+      height: 1px;
+      left: 50%;
+      top: 0;
+      margin-left: -16em;
+      content: '';
+      background: #e5e4e1
+  }
+
+  #post-header {
+      position: relative;
+      padding-top: 6em
+  }
+
+  #post-header.has-cover {
+      padding: 16em 0 2em;
+      background: #000;
+      overflow: hidden;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
+  }
+
+  .post-cover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: 5;
+      background: no-repeat scroll center center/cover #000;
+      animation: 0.5s ease-in forwards fadein
+  }
+
+  .post-cover:after {
+      position: absolute;
+      width: 100%;
+      height: 12em;
+      left: 0;
+      bottom: 0;
+      z-index: 8;
+      content: '';
+      background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 100%)
+  }
+
+  .post {
+      position: relative;
+      padding-top: 2em;
+      z-index: 10
+  }
+
+  .post-title {
+      position: relative;
+      z-index: 10;
+      margin: 0 0 0.5em;
+      font-size: 2em;
+      line-height: 1em;
+      font-weight: 700;
+      text-indent: -1px;
+      color: #000
+  }
+
+  .has-cover .post-title {
+      color: #fff
+  }
+
+  .post-title a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: inherit
+  }
+
+  .post-meta {
+      position: relative;
+      z-index: 10;
+      display: block;
+      margin-bottom: 1.333em;
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 0.75em;
+      font-weight: 400;
+      line-height: 1.333em;
+      opacity: 0.5
+  }
+
+  .has-cover .post-meta {
+      color: #fff;
+      opacity: 0.75
+  }
+
+  .post-meta a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid transparent
+  }
+
+  .post-meta a:hover,
+  .post-meta a:focus {
+      border-color: rgba(0, 0, 0, 0.5)
+  }
+
+  .has-cover .post-meta a:hover,
+  .has-cover .post-meta a:focus {
+      border-color: rgba(255, 255, 255, 0.5)
+  }
+
+  .post-excerpt p {
+      margin: 0
+  }
+
+  .post-content a {
+      border-bottom: 1px solid #f26a3d
+  }
+
+  .post-content a:hover,
+  .post-content a:focus {
+      color: #f26a3d
+  }
+
+  .post-content img,
+  .post-content .fluid-width-video-wrapper {
+      max-width: none;
+      width: 110%;
+      margin-left: -5%
+  }
+
+  .post-info {
+      margin-top: 6em;
+      overflow: hidden
+  }
+
+  .post-share {
+      max-width: 25%;
+      float: right
+  }
+
+  .post-share a {
+      display: block;
+      width: 2em;
+      height: 2em;
+      margin: 0.333em 0 0.333em 0.666em;
+      padding: 0;
+      float: left;
+      font-size: 0.75em;
+      line-height: 2em;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      border-radius: 2px;
+      transition: all ease 0.3s
+  }
+
+  .post-share a:hover,
+  .post-share a:focus {
+      background-color: #212226
+  }
+
+  .post-share a i {
+      color: inherit
+  }
+
+  .post-share a i:before {
+      width: auto;
+      height: auto
+  }
+
+  .post-share .twitter {
+      background-color: #3ea9dd
+  }
+
+  .post-share .facebook {
+      background-color: #3c5a98
+  }
+
+  .post-share .googleplus {
+      background-color: #d14836
+  }
+
+  .post-tags {
+      max-width: 75%;
+      float: left;
+      font-family: 'Fira Sans', sans-serif
+  }
+
+  .post-tags a {
+      display: inline-block;
+      margin: 0 0.333em 0.666em 0;
+      padding: 0.575em 1em;
+      background: #fff;
+      border: 1px solid #f26a3d;
+      font-size: 0.75em;
+      font-weight: 500;
+      line-height: 1.333em;
+      text-align: center;
+      text-decoration: none;
+      color: #f26a3d;
+      border-radius: 2em;
+      transition: all ease 0.3s;
+      box-sizing: border-box
+  }
+
+  .post-tags a:hover,
+  .post-tags a:focus {
+      background: #f26a3d;
+      color: #fff
+  }
+
+  .post-author {
+      position: relative;
+      margin: 2em 0 0;
+      padding: 2em 0;
+      z-index: 10;
+      border-top: 1px solid #e5e4e1;
+      border-bottom: 1px solid #e5e4e1;
+      clear: both
+  }
+
+  .post-author-avatar {
+      position: relative;
+      float: left;
+      width: 15%;
+      margin: -0.5em 0 0 5%;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 10em;
+      box-sizing: border-box
+  }
+
+  .post-author-avatar img {
+      width: 100%;
+      margin: auto;
+      border-radius: 10em;
+      box-sizing: border-box
+  }
+
+  .post-author-bio {
+      padding-left: 25%;
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 0.75em;
+      line-height: 1.333em
+  }
+
+  .post-author-name {
+      margin: 0;
+      padding: 0;
+      font-size: 1.333em;
+      line-height: 1em;
+      text-indent: inherit
+  }
+
+  .post-author-about {
+      margin: 0.666em 0
+  }
+
+  .post-author-bio span {
+      position: relative;
+      font-size: 0.8em;
+      display: inline-block;
+      margin-top: 1.25em;
+      margin-right: 1.25em;
+      font-weight: 400;
+      opacity: 0.5
+  }
+
+  .post-author-bio i {
+      color: inherit
+  }
+
+  .post-author-bio a {
+      color: inherit;
+      text-decoration: none;
+      font-weight: inherit;
+      border-bottom: 1px solid transparent
+  }
+
+  .post-comments {
+      position: relative;
+      padding: 2em 0;
+      text-align: center;
+      border-bottom: 1px solid #e5e4e1;
+      box-sizing: border-box
+  }
+
+  .post-comments.activated {
+      margin: -1px 0 0;
+      padding: 1em;
+      background: #faf9f7;
+      border: 1px solid #e5e4e1
+  }
+
+  .post-comments-activate {
+      display: inline-block;
+      margin: 0;
+      padding: 0.5em 1.25em;
+      border: 1px solid #c2c7cc;
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 0.75em;
+      line-height: 1.333em;
+      color: #8a9199;
+      text-align: center;
+      cursor: pointer;
+      transition: all ease 0.3s;
+      border-radius: 2em
+  }
+
+  .post-comments-activate:hover,
+  .post-comments-activate:focus {
+      color: #f26a3d;
+      border-color: #f26a3d
+  }
+
+  .activated .post-comments-activate {
+      display: none
+  }
+
+  .post-nav {
+      position: relative;
+      border-bottom: 1px solid #e5e4e1
+  }
+
+  .post-nav:after {
+      position: absolute;
+      content: '';
+      width: 1px;
+      height: 100%;
+      left: 50%;
+      top: 0;
+      background: #e5e4e1;
+      z-index: 2
+  }
+
+  .post-nav-next,
+  .post-nav-prev {
+      display: block;
+      width: 50%
+  }
+
+  .post-nav-next {
+      float: left
+  }
+
+  .post-nav-prev {
+      float: right
+  }
+
+  .post-nav-teaser {
+      padding: 1.5em 0;
+      min-height: 6em
+  }
+
+  .post-nav-next .post-nav-teaser {
+      padding-right: 1em
+  }
+
+  .post-nav-prev .post-nav-teaser {
+      padding-left: 1em
+  }
+
+  .post-nav i {
+      position: absolute;
+      top: 50%;
+      width: 2em;
+      height: 2em;
+      margin-top: -1em;
+      font-size: 2em;
+      line-height: 2em;
+      text-align: center;
+      transition: all ease-out 0.3s;
+      color: #e5e4e1
+  }
+
+  .post-nav-next i {
+      left: 0;
+      margin-left: -1.75em
+  }
+
+  .post-nav-prev i {
+      right: 0;
+      margin-right: -1.75em
+  }
+
+  .post-nav a:hover i,
+  .post-nav a:focus i {
+      color: #f26a3d
+  }
+
+  .post-nav-title {
+      margin: 0 0 0.5em;
+      padding: 0;
+      font-size: 1em;
+      line-height: 1em;
+      color: inherit
+  }
+
+  .post-nav-excerpt {
+      margin: 0;
+      font-size: 0.75em;
+      line-height: 1.333em
+  }
+
+  .pagination {
+      position: relative;
+      height: 2em;
+      margin: 0;
+      padding: 2em 0;
+      font-family: 'Fira Sans', sans-serif
+  }
+
+  .pagination:after {
+      position: absolute;
+      width: 32em;
+      height: 1px;
+      left: 50%;
+      bottom: 0;
+      margin-left: -16em;
+      content: '';
+      background: #e5e4e1
+  }
+
+  .pagination a {
+      position: relative;
+      display: block;
+      height: 1.333em;
+      margin: -1px 0;
+      padding: 0.666em 1em;
+      z-index: 100;
+      border: 1px solid #c2c7cc;
+      font-size: 0.75em;
+      line-height: 1.5em;
+      text-align: center;
+      text-decoration: none;
+      color: #8a9199;
+      transition: all ease 0.3s;
+      border-radius: 2em
+  }
+
+  .pagination .pagination-prev {
+      float: right;
+      padding-left: 1.333em
+  }
+
+  .pagination .pagination-next {
+      float: left;
+      padding-right: 1.333em
+  }
+
+  .pagination a:hover,
+  .pagination a:focus {
+      color: #f26a3d;
+      border-color: #f26a3d
+  }
+
+  .pagination .pagination-label {
+      position: relative;
+      display: inline-block;
+      height: 1em;
+      line-height: 1em
+  }
+
+  .pagination a i {
+      position: relative;
+      width: auto;
+      top: -1px;
+      margin: auto;
+      color: inherit;
+      font-size: 0.75em;
+      line-height: 1.333em
+  }
+
+  .pagination .pagination-info {
+      position: absolute;
+      width: 100%;
+      height: 2.666em;
+      left: 0;
+      z-index: 50;
+      display: block;
+      font-size: 0.75em;
+      line-height: 2.666em;
+      text-align: center
+  }
+
+  .extra-pagination {
+      display: none
+  }
+
+  .extra-pagination .pagination:after {
+      top: auto;
+      bottom: 0
+  }
+
+  .archive-template .extra-pagination {
+      display: block
+  }
+
+  @media only screen and (max-width: 960px) {
+      #wrapper {
+          transform: translate3d(0, 0, 0)
+      }
+      .menu-active #wrapper {
+          padding-right: 0;
+          transform: translate3d(-16em, 0, 0)
+      }
+      .blog-logo,
+      .nav-button {
+          position: absolute
+      }
+      #blog-author {
+          margin: auto
+      }
+  }
+
+  @media only screen and (max-width: 640px) {
+      html {
+          font-size: 50%
+      }
+      .post-share,
+      .post-tags {
+          max-width: none;
+          float: none;
+          margin: 0 0 2em
+      }
+      .post-share a {
+          margin-left: 0;
+          margin-right: 0.666em
+      }
+      .post-nav i {
+          font-size: 1.5em
+      }
+  }
+
+  @media only screen and (max-width: 480px) {
+      .inner {
+          padding: 0 16px
+      }
+      .post-template #main-header {
+          padding: 16px 0
+      }
+      #main-nav a {
+          margin: 16px
+      }
+      .post-author-avatar {
+          margin: -0.25em 0 0 0.5em
+      }
+      .container .post.featured .post-title:after {
+          left: 0;
+          top: -1.75em
+      }
+      .post-content img,
+      .post-content .fluid-width-video-wrapper {
+          width: 100%;
+          margin-left: auto
+      }
+      .post-nav:after {
+          display: none
+      }
+      .post-nav-next,
+      .post-nav-prev {
+          display: block;
+          width: 100%
+      }
+      .post-nav-teaser {
+          position: relative;
+          min-height: 4em;
+          padding: 2em 0
+      }
+      .post-nav-next .post-nav-teaser:after {
+          position: absolute;
+          content: '';
+          width: 100%;
+          height: 1px;
+          left: 0;
+          bottom: 0;
+          margin-bottom: -1px;
+          background: #e5e4e1;
+          z-index: 2
+      }
+      .post-nav-next .post-nav-teaser {
+          padding-right: 0;
+          padding-left: 1.5em
+      }
+      .post-nav-prev .post-nav-teaser {
+          padding-left: 0;
+          padding-right: 1.5em
+      }
+      .post-nav-next i {
+          margin-left: -1em
+      }
+      .post-nav-prev i {
+          margin-right: -1em
+      }
+  }
+
+  @media only screen and (max-width: 320px) {
+      .pagination .pagination-label {
+          display: none
+      }
+  }
+
+
+
+  #myBtn {
+      /* display: none; /* Hidden by default */
+      position: fixed; /* Fixed/sticky position */
+      bottom: 20px; /* Place the button at the bottom of the page */
+      right: 30px; /* Place the button 30px from the right */
+      z-index: 99; /* Make sure it does not overlap */
+      border: none; /* Remove borders */
+      outline: none; /* Remove outline */
+      background-color: #6A9FB5; /* Set a background color */
+      color: white; /* Text color */
+      cursor: pointer; /* Add a mouse pointer on hover */
+      padding: 15px; /* Some padding */
+      border-radius: 10px; /* Rounded corners */
+      font-size: 18px; /* Increase font size */
+  }
+
+  #myBtn:hover {
+      background-color: turquoise; /* Add a dark-grey background on hover */
+  }
+  #show_image {
+    background-color: #6A9FB5;
+    color: white;
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+  }
+
+
+
+  </style>
+
+  <script>
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          document.getElementById("myBtn").style.display = "block";
+      } else {
+          document.getElementById("myBtn").style.display = "none";
+      }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+  }
+
+    </script>
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+     $(document).ready(function(){
+        $('#show_image').on("click", function(){
+           $('#face3').toggle();
+        });
+     });
+  </script>
+
+  <!-- Feed -->
+
+  <link href="../../theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="../../theme/css/code_blocks/github.css" rel="stylesheet">
+
+    <!-- CSS specified by the user -->
+
+
+    <link href="../../assets/css/myblog.css" type="text/css" rel="stylesheet" />
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <link href="../../2018/08/update.html" rel="canonical" />
+  <!--  -->
+
+    <meta name="description" content="Do you have a friend who tells the same story at every party? Have you noticed how on each iteration the sky gets darker, the water gets...">
+
+    <meta name="author" content="donna j bridge">
+
+  <!--     <meta name="tags" content="memory">
+    <meta name="tags" content="updating">
+    <meta name="tags" content="false memory">
+    <meta name="tags" content="cognitive neuroscience">
+    <meta name="tags" content="data science">
+ -->
+
+
+
+
+<!-- Open Graph -->
+<meta property="og:site_name" content=" "/>
+<meta property="og:title" content="memory is malleable"/>
+<meta property="og:description" content="Do you have a friend who tells the same story at every party? Have you noticed how on each iteration the sky gets darker, the water gets..."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="../../2018/08/update.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2018-08-20 00:00:00-05:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="../../author/donna-j-bridge">
+<meta property="article:section" content="articles"/>
+<meta property="article:tag" content="memory"/>
+<meta property="article:tag" content="updating"/>
+<meta property="article:tag" content="false memory"/>
+<meta property="article:tag" content="cognitive neuroscience"/>
+<meta property="article:tag" content="data science"/>
+<meta property="og:image" content="../..//images/elephant.jpg">
+
+<!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@donnajobridge">
+    <meta name="twitter:title" content="memory is malleable">
+    <meta name="twitter:url" content="../../2018/08/update.html">
+
+        <meta name="twitter:image:src" content="../..//images/elephant.jpg">
+
+      <meta name="twitter:description" content="Do you have a friend who tells the same story at every party? Have you noticed how on each iteration the sky gets darker, the water gets...">
+
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "name": "memory is malleable",
+  "headline": "memory is malleable",
+  "datePublished": "2018-08-20 00:00:00-05:00",
+  "dateModified": "",
+  "author": {
+    "@type": "Person",
+    "name": "donna j bridge",
+    "url": "../../author/donna-j-bridge"
+  },
+  "image": "../..//images/elephant.jpg",
+  "url": "../../2018/08/update.html",
+  "description": "Do you have a friend who tells the same story at every party? Have you noticed how on each iteration the sky gets darker, the water gets..."
+}
+</script>
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+              <li role="presentation"><a href="../../pages/about/">donna j. bridge, ph.d.</a></li>
+              <li role="presentation"><a href="../../pages/grants/">awards & grants</a></li>
+              <li role="presentation"><a href="../../pages/contact/">contact</a></li>
+              <li role="presentation"><a href="../../pages/friends/">friends</a></li>
+              <li role="presentation"><a href="../../pages/pubs/">publications</a></li>
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="../../" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">memory is malleable</h1>
+        <!-- TODO : Proper class for headline -->
+
+        <!-- TODO : Modified check -->
+            <div class="post-cover cover" style="background-image: url('../..//images/elephant.jpg')">
+      </div>
+    </header>
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+      <!-- <div class="icon-bar">
+        <a href="continuum.html"><img src="/images/continuum_icon.jpg" width=25%></a>
+        <a href="update.html"><img src="/images/update_icon.jpg" width=25%></a>
+        <a href="eyes.html"><img src="/images/eye_icon.jpg" width=25%></a>
+        <a href="tree.html"><img src="/images/emo_icon.jpg" width=25%></a>
+      </div> -->
+
+
+        <article class="post">
+
+
+        <div class="inner">
+
+
+          <div class="clear"></div>
+
+          <div class="icon_row">
+              <div class="icon_column">
+                <a href="continuum.html">
+                <img src="/images/continuum_icon.jpg" alt="Snow" style="width:90%">
+              </a>
+              </div>
+
+              <div class="icon_column">
+                <a href="update.html">
+                <img src="/images/update_icon.jpg" alt="Forest" style="width:90%">
+              </a>
+              </div>
+
+              <div class="icon_column">
+                <a href="eyes.html">
+                <img src="/images/eye_icon.jpg" alt="Mountains" style="width:90%">
+              </a>
+              </div>
+
+              <div class="icon_column">
+                <a href="tree.html">
+                <img src="/images/emo_icon.jpg" alt="Mountains" style="width:90%">
+              </a>
+              </div>
+          </div>
+
+            <section class="post-content">
+
+
+
+                <p>Do you have a friend who tells the same story at every party? Have you noticed how on each iteration the sky gets darker, the water gets deeper, and the guppy slowly morphs into a whale? Does this mean your friend is a big fat liar? Well maybe a little. But, this is also a natural feature of our memory. It turns out our memories are not static representations of past events like a photo or a video recording, but they dynamically change every time you think about them.</p>
+<p>It may seem troublesome that we don’t keep accurate representations of the past stored in our memories -- but I would argue that this is actually an adaptive process that allows us to cope with our constantly-changing situations. For instance, if our memories stayed the same and never changed, you would never learn that your partner is now 20 years older than when you met him, because the younger version of him would prevail in your memory — it would never get updated with constantly changing information (gray hair, wrinkles around the eyes, etc.).</p>
+<p><img alt="fig1" src="/images/telephone_fishing.png"></p>
+<h3>what happens to our memories over time?</h3>
+<p>Remember the Telephone Game? The first person whispers “My new blue shoes”. After a few whispers down the line, the final person hears “I know voodoo”. Each person hears something a little different, because they only hear a distorted version of the original due to low-quality signal. In the telephone game, some words drop out entirely from the message, other words get changed to new words, and completely new words somehow get inserted out of thin air. Our memories behave similarly. In the telephone game, one message is passed from one person to another. But with memory, the message is passed from our past self to our current self every time we remember it. And this happens over and over again each time we remember an experience.</p>
+<p>Contrast this idea with how people usually think about memory: as some unchanging photograph. In this view, when you remember an event and take out your “original” or “master copy” of the photograph, and look at it. You might notice different things, but it’s still the same, unchanging photo. The “telephone game” theory of memory on the other hand has no “master copy”, it just has a message that is continuously altered every time you think about it.</p>
+<p>This feels a little weird. Why wouldn’t we notice our memories changing? It’s because we only experienced the event once, but we recall it many times. Unfortunately, unless we had a video recording of the entire event (and a view from our first person perspective), we can’t compare our current version to the original. We only have the last time we remembered it fresh in our memories. Because of that, we can be highly confident that we are accurately remembering an event, when in fact, we are recalling <em>the last time we remembered</em> the original event.</p>
+<p>Our memories can change in a few different ways. First, the most common complaint about memory is that we forget details (and sometimes entire events). What was his name? What color dress was she wearing? Second, we don’t just forget, but we <em>fill in</em> pieces of the story with information that <em>was not from the original experience</em>. The filler information is often something we've encountered, just not during the original event. This is like two different experiences crossing over into one memory. It might seem relatively inconsequential to forget some details or for some details to morph into others, but it’s disconcerting how this type of information is relied heavily on in a courtroom when there is an eye witness.</p>
+<h3>measuring memory change</h3>
+<p>Most memory studies rely on showing someone a stimuli (like a word or photograph), waiting, and then asking if the person remembered that thing. The yields a simple “yes” or “no” response -- there is no gray area. It’s difficult to measure <em>how much</em> a memory changed in this type of test format. To get around this problem, I designed a spatial memory task that required subjects to use the mouse to place an object back in its location. This type of task yielded a graded measure of memory: distance. I was able to measure the distance each object was placed from the original location and track how placement changed over the course of multiple tests.</p>
+<p>I designed the experiment to examine how a memory shifts each time we remember it. In this study, participants learned object-location associations, meaning each object was presented in a specific location on the screen. I tested the subjects every day for three days. subjects were asked to place each object back in its original location. As in real life after we experience an event, subjects never received feedback about whether or not they had placed the object in the correct spot. With this test, I was able to measure the two features of memory distortion: 1) How much did participants forget the original location of the course of the three days? and 2) Did the locations they chose depend more on the <em>original location</em> or on the <em>location that they had last selected</em>?</p>
+<p><img alt="fig2" src="/images/telephone_spatial.jpg"></p>
+<p>First I looked at <em>forgetting</em> by seeing how far away they placed the object over the three-day period. For this analysis, I simply measured the distance each object was placed from its original location on each of the tests at Day 1, Day 2, and Day 3. Interestingly, there was a big drop in performance from Day 1 to Day 2, but forgetting leveled off, as memory declined substantially less from Day 2 to Day 3. These results suggest that after an event, our memory drops off immediately, and we forget a lot of the details and context information. But after that initial drop-off period, our memories maintain stability. These results are in line with other studies of memory consolidation that show that older memories are more stable than newer memories. It also resembles the classic <a href="https://en.wikipedia.org/wiki/Forgetting_curve" target="_blank">Ebbinghause forgetting curve</a>, which shows a steep drop-off in accuracy immediately after learning and then levels off as time goes on.</p>
+<p><img alt="fig3" src="/images/react_kdeForgetting.png"></p>
+<p>Next I looked at how each test influenced the content of memory on each subsequent test. For this analysis, I looked at final memory outcome on the Day 3 test. I measured the distance each object was placed from 3 different locations: the originally studied location, the location subjects placed the object on the Day 1 test, and the location subjects placed the object on the Day 2 test. In this way, I could see how each of these experiences influenced where subjects placed the object on the final Day 3 test. Interestingly, the results showed increasing influence of the most recent test on final memory performance. Subjects placed objects closest to the Day 2 test location, followed by the Day 1 test location, and farthest from the originally studied location. <a href="/pdfs/bridge12.pdf" target="_blank">(Bridge, 2012)</a></p>
+<p><img alt="fig4" src="/images/react_kdeUpdating.png"></p>
+<p>These results show the powerful influence each experience of remembering has on our final memory. Each time we remember an event, information from that experience of remembering gets incorporated into the original memory, causing it to change slightly each time. This type of study makes you wonder what a memory actually is. How much is it really reliving the original experience? It seems that our memories are more colored by each experience we have of reminiscing about those old times. Our memories change with us, and reflect more about who we currently are rather than who we were.</p>
+<h3>it’s not just about what you experienced recently…</h3>
+<p>Based on that study, it could be that case that every time we remember an event, we change it by incorporating the retrieved information into the original memory. But, there is an alternative hypothesis. It could be, that we are just more likely to remember things that happened recently rather than things that happened far in the past. Subjects remembered the Day 2 test location the best on the Day 3 test, but they also encountered that location most recently. To get to the bottom of this, I designed another study to determine if recency was really the underlying cause of this effect.</p>
+<p>In this new study, I implemented 2 different conditions. First, subjects studied objects in unique locations. Then, in an “Active” condition, I asked subjects to place each object back in its original location (to the best of their ability), so they were required to remember each object’s location as in the first study. In a second condition called a “Passive” condition, I randomly chose new locations on the screen and told subjects to place each object in one of these random locations. So to clarify the differences in these conditions, in the Active condition, subjects had to recall from memory each object’s location (which always diverged a bit from the original location, because our memory is never perfect!). On the other hand, in the Passive condition, I chose the wrong locations for subjects to place each object in. After the Active or Passive manipulation, subjects completed a final test. On this test, they saw each object in 3 locations, and they were prompted to select the object’s original location. The object choices were the original location, the updated location, and a new location.</p>
+<p><img alt="fig5" src="/images/cxtupDesign_samecxt.jpg"></p>
+<p>If the updating effect I saw in the first study was really just about recency, it shouldn’t matter if I show subjects the wrong location or that mistakenly recall the wrong location -- they should remember the most recently encountered location on the final test. On the other hand, if updating only happens when we actively remember the wrong location, then subjects should only choose the updated location in the Active condition, but not the Passive condition.</p>
+<h3>results</h3>
+<p>It turns out remembering events is really special. Subjects were not easily tricked into thinking the wrong location I selected was the object’s original location. In the Passive location, subjects disproportionately chose the original location over the other options. However, updating was prevalent in the Active condition. Subjects usually chose the updated (incorrectly remembered) location on the final test instead of the other choices. These results show that remembering events provides an opportunity to update them. The good news is that we are not easily fooled by incorrect information that does not match our memories. <a href="/pdfs/bridge14jon.pdf" target="_blank">(Bridge, 2014 (1))</a></p>
+<div class="center_pic">
+<img class="icon" src='/images/cxtup_swarm.png'>
+</div>
+
+<h3>where does this study fall on the consciousness continuum?</h3>
+<p>These studies involved explicit responses from participants. On each test, I explicitly asked participants to place the objects back in their original locations. On the final test, they tended to erroneously remember the previously remembered location rather than the original location. I would argue that the process of memory updating was unconscious. Subjects were not aware that their memory changed each time I tested them. These studies goes to show that even when we do some explicit actions (intentionally remembering an event), new information can seep into those memories due to unconscious processes happening in our brain.</p>
+<h3>main points</h3>
+<ul>
+<li>There’s no true unadulterated original version memory stored in your brain, unless it was never accessed (remembered). But if that were the case, it would probably be buried or forgotten.</li>
+<li>Our memories are engineered to change. This is adaptive, and helps us learn new information quickly and efficiently. <a href="/pdfs/bridge14nsy.pdf" target="_blank">(Bridge, 2014 (2))</a></li>
+</ul>
+<h3>press links</h3>
+<ul>
+<li><a href="https://www.npr.org/sections/health-shots/2014/02/04/271527934/our-brains-rewrite-our-memories-putting-present-in-the-past" target="_blank">npr</a></li>
+<li><a href="http://www.latimes.com/science/sciencenow/la-sci-sn-memory-updating-20140204-story.html#axzz2sSngvyz8" target="_blank">la times</a></li>
+<li><a href="https://wgntv.com/2014/02/04/study-minds-incorporate-new-information-into-original-memories/" target="_blank">wgn</a></li>
+<li><a href="https://chicagotonight.wttw.com/2012/10/31/distorted-memories">wttw</a></li>
+<li><a href="http://thechart.blogs.cnn.com/2012/09/20/your-memory-is-like-a-game-of-telephone/" target="_blank">cnn</a></li>
+</ul>
+<h3>data &amp; analysis</h3>
+<ul>
+<li><a href="https://github.com/donnajobridge/data_visualizations/tree/master/react" target="_blank">experiment 1</a></li>
+<li><a href="https://github.com/donnajobridge/data_visualizations/tree/master/cxtupdate" target="_blank">experiment 2</a></li>
+</ul>
+            </section>
+
+            <section class="post-info">
+                <!-- <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=memory is malleable&amp;url=../../2018/08/update.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=../../2018/08/update.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=../../2018/08/update.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div> -->
+
+                <!--                 <aside class="post-tags">
+<a href="../../tag/memory">memory</a><a href="../../tag/updating">updating</a><a href="../../tag/false-memory">false memory</a><a href="../../tag/cognitive-neuroscience">cognitive neuroscience</a><a href="../../tag/data-science">data science</a>                </aside>
+ -->
+
+                <div class="clear"></div>
+
+
+                </section>
+
+                  <div id="similar">
+                    <hr style="width:100%">
+
+                    <div class="clearfix">
+                    <div class="column left_pic">
+                   <a href="../../pages/about">
+                    <img class="icon" src='/images/donna.jpg'>
+                   </a>
+
+                    </div>
+
+                    <div class="column right_pic">
+                      <br>
+                      <p align:'center'>
+                        I am a cognitive neuroscientist researching how conscious and unconscious processes give rise to learning and memory.
+                      </p>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- <aside class="post-nav">
+
+                  <div class="icon-bar">
+                    <a href="continuum.html"><img class="icon" src="/images/continuum_icon.jpg"></a>
+                    <a href="update.html"><img class="icon" src="/images/update_icon.jpg"></a>
+                    <a href="eyes.html"><img class="icon" src="/images/eye_icon.jpg"></a>
+                    <a href="tree.html"><img class="icon" src="/images/emo_icon.jpg"></a>
+
+                  </div>
+
+                    <!--                     <a class="post-nav-next" href="../../2018/08/continuum.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-left"></i>
+                                <h2 class="post-nav-title">consciousness continuum</h2>
+                            <p class="post-nav-excerpt">Human behavior arises from both unconscious and conscious sources. A simple example is...</p>
+                        </section>
+                    </a>
+                    <a class="post-nav-prev" href="../../2018/08/eyes.html">
+                        <section class="post-nav-teaser">
+                            <i class="ic ic-arrow-right"></i>
+                                <h2 class="post-nav-title">the eyes are the window to the brain</h2>
+                            <p class="post-nav-excerpt">You might think that our eyes mainly get preoccupied by flashy things in the...</p>
+                        </section>
+                    </a>
+ -->
+
+                    <div class="clear"></div>
+
+                </aside>
+
+            </div>
+
+        </article>
+    </main>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">&#8679;</button>
+
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+
+
+          <!-- <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span> -->
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="../../theme/js/script.js"></script>
+
+  <!--  -->
+</body>
+</html>
