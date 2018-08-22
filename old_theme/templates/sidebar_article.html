@@ -1,0 +1,36 @@
+<div class="sidebar">
+  <div class="container sidebar-sticky-article">
+
+    <ul class="sidebar-menu">
+        <li><a href="{{ SITEURL }}">home</a></li>
+        {% for title, link in MENUITEMS %}
+        <li><a class="item" href="{{ link }}">{{ title }}</a></li>
+        {% endfor %}
+
+        {% if DISPLAY_PAGES_ON_MENU %}
+          {% for page in PAGES %}
+          <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+          {% endfor %}
+        {% endif %}
+          <!-- {% for cat, null in categories %} -->
+          <!-- <li {% if cat == category %}class="active"{% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{ cat }}</a></li> -->
+          <!-- {% endfor %} -->
+    </ul>
+    <!-- <nav class="sidebar-nav"> -->
+    <!-- {% for name, link in SOCIAL %} -->
+    <!-- {% if name == 'email' %} -->
+    <!-- <a class="sidebar-nav-item" href="mailto:{{ link }}"> -->
+    <!-- <i class="fa fa-envelope"></i> -->
+    <!-- </a> -->
+    <!-- {% else %} -->
+    <!-- <a class="sidebar-nav-item" href="{{ link }}"> -->
+    <!-- <i class="fa fa-{{ name }}"></i> -->
+    <!-- </a> -->
+    <!-- {% endif %} -->
+    <!-- {% endfor %} -->
+    <!-- <a class="sidebar-nav-item" href="{{ FEED_ALL_RSS }}"> -->
+    <!-- <i class="fa fa-feed"></i> -->
+    <!-- </a> -->
+    <!-- </nav> -->
+  </div>
+</div>
