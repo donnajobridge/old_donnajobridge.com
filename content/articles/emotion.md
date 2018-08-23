@@ -34,7 +34,7 @@ These findings made me wonder how our current emotional state influences *what w
 
 Shifting this question to *memory* requires changing a few key aspects of the experimental design.
 
-####designing the experiment
+###designing the experiment
 First, I couldn't use Navon figures. As clever as they are, geometric shapes and letters are not memorable. Our mental representation of the letter E is abstracted to the point where it's hard to remember any specific letter E you've encountered.  However, local vs. global details are prevalent in plenty of naturally-occurring stimuli. For instance, houses have both local features like the windows, door, building material, and these elements fit together to form the the overall shape and style of the house.
 
 For my experiment to work, I had to pick a particular experimental stimulus where subjects could study dozens of them (called trials) and remember them distinctly after a delay. I ended up opting for something we all extremely familiar with: faces.

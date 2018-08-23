@@ -1,6 +1,6 @@
 Title: memory is malleable
 Slug: update
-Date: 2018-08-20
+Date: 2018-08-16
 Tags: memory, updating, false memory, cognitive neuroscience, data science
 Image: /images/update_icon.jpg
 Cover: /images/elephant.jpg

@@ -1,6 +1,6 @@
 Title: the eyes are the window to the brain
 Slug: eyes
-Date: 2018-08-16
+Date: 2018-08-20
 Tags: memory, eye movements, cognitive neuroscience, data science
 Image: /images/eye_icon.jpg
 Cover: /images/elephant.jpg
