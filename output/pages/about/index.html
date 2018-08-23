@@ -18,11 +18,23 @@
   <style>
   /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 
+  .flexcontainer {
+    display: flex; /* or inline-flex */
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .flexitem {
+    order: <integer>; /* default is 0 */
+     flex-basis: auto;
+  }
+
   .column {
       float: left;
       padding-bottom: 5%;
       /* padding: 50px; */
       padding-left:.5em;
+      /* display: flex; /* or inline-flex */ */
   }
 
   .clearfix::after {
@@ -74,15 +86,15 @@
 
     .icon_big {
         width: 55%;
-        /* float: left; */
+        float: left;
+        align: top;  to
         padding-top: 0%;
         /* height: 50px; */
     }
     .icon_title_big {
         width: 40%;
-        padding-top: 0%;
-        /* float: left; */
-        /* height: 200px; */
+        padding-top: 10%;
+        float: left;
     }
     .left_pic {
         width: 45%;
@@ -1068,7 +1080,7 @@
   .inner {
       max-width: 32em;
       margin: 0 auto;
-      padding: 0 2em
+      padding: 0 2em;
   }
 
   .nav-button {

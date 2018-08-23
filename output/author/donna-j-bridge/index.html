@@ -18,11 +18,23 @@
   <style>
   /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 
+  .flexcontainer {
+    display: flex; /* or inline-flex */
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .flexitem {
+    order: <integer>; /* default is 0 */
+     flex-basis: auto;
+  }
+
   .column {
       float: left;
       padding-bottom: 5%;
       /* padding: 50px; */
       padding-left:.5em;
+      /* display: flex; /* or inline-flex */ */
   }
 
   .clearfix::after {
@@ -74,15 +86,15 @@
 
     .icon_big {
         width: 55%;
-        /* float: left; */
+        float: left;
+        align: top;  to
         padding-top: 0%;
         /* height: 50px; */
     }
     .icon_title_big {
         width: 40%;
-        padding-top: 0%;
-        /* float: left; */
-        /* height: 200px; */
+        padding-top: 10%;
+        float: left;
     }
     .left_pic {
         width: 45%;
@@ -1068,7 +1080,7 @@
   .inner {
       max-width: 32em;
       margin: 0 auto;
-      padding: 0 2em
+      padding: 0 2em;
   }
 
   .nav-button {
@@ -2196,14 +2208,14 @@
     <div class="extra-pagination">
     </div>
 
-        <article class="post">
-        <div class="inner">
-
+    <article class="post">
+    <div class="inner">
           <header class="post-header">
               <h5 class="post-title"><a href="../../2018/08/continuum.html" rel="bookmark" title="Permalink to consciousness continuum">consciousness continuum</a>
               </h5>
               <!-- <div class="clear"></div> -->
           </header>
+
             <div class="clearfix">
               <div class="column icon_big">
                 <a href="../../2018/08/continuum.html" rel="bookmark" title="Permalink to consciousness continuum">
@@ -2225,16 +2237,17 @@
             </div>
 
 
+
             </div>
         </article>
-        <article class="post">
-        <div class="inner">
-
+    <article class="post">
+    <div class="inner">
           <header class="post-header">
               <h5 class="post-title"><a href="../../2018/08/eyes.html" rel="bookmark" title="Permalink to the eyes are the window to the brain">the eyes are the window to the brain</a>
               </h5>
               <!-- <div class="clear"></div> -->
           </header>
+
             <div class="clearfix">
               <div class="column icon_big">
                 <a href="../../2018/08/eyes.html" rel="bookmark" title="Permalink to the eyes are the window to the brain">
@@ -2256,16 +2269,17 @@
             </div>
 
 
+
             </div>
         </article>
-        <article class="post">
-        <div class="inner">
-
+    <article class="post">
+    <div class="inner">
           <header class="post-header">
               <h5 class="post-title"><a href="../../2018/08/update.html" rel="bookmark" title="Permalink to memory is malleable">memory is malleable</a>
               </h5>
               <!-- <div class="clear"></div> -->
           </header>
+
             <div class="clearfix">
               <div class="column icon_big">
                 <a href="../../2018/08/update.html" rel="bookmark" title="Permalink to memory is malleable">
@@ -2287,16 +2301,17 @@
             </div>
 
 
+
             </div>
         </article>
-        <article class="post">
-        <div class="inner">
-
+    <article class="post">
+    <div class="inner">
           <header class="post-header">
               <h5 class="post-title"><a href="../../2018/08/active.html" rel="bookmark" title="Permalink to active learning">active learning</a>
               </h5>
               <!-- <div class="clear"></div> -->
           </header>
+
             <div class="clearfix">
               <div class="column icon_big">
                 <a href="../../2018/08/active.html" rel="bookmark" title="Permalink to active learning">
@@ -2318,16 +2333,17 @@
             </div>
 
 
+
             </div>
         </article>
-        <article class="post">
-        <div class="inner">
-
+    <article class="post">
+    <div class="inner">
           <header class="post-header">
               <h5 class="post-title"><a href="../../2018/08/tree.html" rel="bookmark" title="Permalink to remembering the forest vs. the trees">remembering the forest vs. the trees</a>
               </h5>
               <!-- <div class="clear"></div> -->
           </header>
+
             <div class="clearfix">
               <div class="column icon_big">
                 <a href="../../2018/08/tree.html" rel="bookmark" title="Permalink to remembering the forest vs. the trees">
@@ -2347,6 +2363,7 @@
 
               </div>
             </div>
+
 
 
             </div>

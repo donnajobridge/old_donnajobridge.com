@@ -1,7 +1,7 @@
 Title: active learning
 Slug: active
 Date: 2018-08-08
-Tags: memory, active learning, retrieval,eye movements, data science
+Tags: memory, active learning, retrieval, eye movements, data science
 Image: /images/active_icon.jpg
 Summary: actively using memory to enhance learning
 
